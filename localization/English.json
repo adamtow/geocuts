@@ -74,6 +74,7 @@
 	    
 	    	    
 	    "prompt.action": "Choose an action to run when you are in the location’s trigger radius. ",
+	    "prompt.currentLocation": "Current Location:",
 	    "prompt.bulkEdit": "Select Location Triggers to edit.",
 	    "prompt.frequency": "How often do you want this cron job to run in Cronios? Check times start from the top of the hour.",
 	    "prompt.iPad": "This iPad may only be able to send messages to iMessage recipients, not SMS messages.",
