@@ -1,12 +1,14 @@
 {
 	"English": {
 		"alert.about": "Location Triggers for Cronios lets you run shortcuts or send text messages whenever you enter a location.\n\nConfigure your location triggers to run once, every day, or every time. Unleash the power of location with Cronios and Location Triggers!",
+		"alert.currentLocation": "Retrievijg your current location. This may take a few moments.",
 	    "alert.import": "Tap OK to import into Cronios.\\n\\nIf Import Active Status is enabled in Cronios Settings, the cron job will run automatically when you enter “Tun Continuously” mode in Cronios. otherwise edit the cron job and tap Enable.\\n\\nYou may also want to adjust the cron schedule expression for the job to better suit the frequency of checks, which is currently set to every {{frequency}} minutes.",
 	    "alert.lastSent": "Your last text message was sent on:",
 	    "alert.lastSent.never": "You have never sent a text message using Text When I Arrive.",
 	    "alert.location.none": "No location specified. Please launch this shortcut from the Shortcuts Home to configure before running it in Cronios.",
 	    "alert.mapsURL.clipboard": "The maps URL to this location has been copied to the clipboard",
 	    "alert.recipient.nome": "No recipient specified. Please launch this shortcut from the Shortcuts Home to configure before running it in Cronios.",
+	    "alert.shortcuts.retrieval": "Retrieving a list of your shortcuts. This may take a few moments.",
 	    "alert.success.message": "Your text message to “{{recipient}}” was sent. ",
 	    "alert.success.shortcut": "The shortcut “{{shortcut}}” was run.",
 	    "error.cronios": "Cronios is not installed on this iOS device. Download it from http://cronios.com.",
