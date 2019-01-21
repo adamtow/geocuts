@@ -1,2 +1,2 @@
-# location-trigger
-Location Trigger for Cronios
+# location-triggers
+Location Triggers for Cronios
