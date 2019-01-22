@@ -2,7 +2,7 @@
 	"English": {
 		"alert.about": "Location Triggers for Cronios lets you run shortcuts or send text messages whenever you enter a location.\n\nConfigure your location triggers to run once, every day, or every time. Unleash the power of location with Cronios and Location Triggers!",
 		"alert.currentLocation": "Retrievijg your current location. This may take a few moments.",
-	    "alert.import": "Tap OK to import into Cronios.\\n\\nIf Import Active Status is enabled in Cronios Settings, the cron job will run automatically when you enter “Tun Continuously” mode in Cronios. otherwise edit the cron job and tap Enable.\\n\\nYou may also want to adjust the cron schedule expression for the job to better suit the frequency of checks, which is currently set to every {{frequency}} minutes.",
+	    "alert.import": "Tap OK to import into Cronios.\n\nIf Import Active Status is enabled in Cronios Settings, the cron job will run automatically when you enter “Run Continuously” mode in Cronios. otherwise edit the cron job and tap Enable.\n\nYou may also want to adjust the cron schedule expression for the job to better suit the frequency of checks, which is currently set to every {{frequency}} minutes.",
 	    "alert.lastSent": "Your last text message was sent on:",
 	    "alert.lastSent.never": "You have never sent a text message using Text When I Arrive.",
 	    "alert.location.none": "No location specified. Please launch this shortcut from the Shortcuts Home to configure before running it in Cronios.",
@@ -130,11 +130,15 @@
 	    
 	    "menu.settings.back": "Back",
 	    "menu.settings.currentLocation": "Get Current Location at Startup",
+	    "menu.settings.debug": "Debug",
 	    "menu.settings.defaultCommand": "Default Command",
+	    "menu.settings.lockDetection": "Lock Detection",
+	    "menu.settings.lockDetectionVoice": "Audibly Ask to Unlock Your Device",
 	    "menu.settings.log": "Enable Logs",
 	    "menu.settings.reset": "Reset…",
+	    "menu.settings.tools": "Tools",
 	    "menu.settings.language": "Change Language…",
-	    "menu.settings.wizard": "Use Wizard for New Location Triggers",
+	    "menu.settings.wizard": "Enable Location Trigger Wizard",
 	    	    
 	    "prompt.action": "Choose an action to run when you are in the location’s trigger radius. ",
 	    "prompt.bulkEdit": "Select location triggers to edit.",
@@ -167,7 +171,7 @@
 	    "prompt.schedule.endTime": "Set the end time for the location trigger.",
 	    "prompt.shortcut": "Choose a shortcut to run when you are within the location’s trigger radius.",
 	    "prompt.shortcut.search": "Search for a shortcut. Searches are case-sensitive.",
-	    "prompt.triggerRadius": "Enter the radius in {{distance unit}} around the location where you want the trigger to occur.",
+	    "prompt.triggerRadius": "Enter the maximum distance in {{distance unit}} around the location where you want the trigger to occur.\n\n{{Location}}",
 	    "prompt.unlock": "You will need to unlock this device to retrieve the current location and continue evaluating your location triggers."
 	}
 }
