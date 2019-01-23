@@ -63,7 +63,7 @@
 	    "menu.entry.delete": "Delete…",
 	    "menu.entry.delete.confirm": "Delete",
 	    "menu.entry.delete.cancel": "Don't Delete",
-	    "menu.entry.home": "Back to Home",
+	    "menu.entry.home": "Home",
 	    "menu.entry.location": "Location",
 	    "menu.entry.location.set": "Set Location…",
 	    "menu.entry.location.distanceTo": "Distance to:",
@@ -136,8 +136,10 @@
 	    "menu.main.openMapsAfterRun": "Open {{Maps App}} After Running",
 	    "menu.main.openMapsAfterRun.description": "Enable this when actively getting directions.",
 	    "menu.main.new": "New Location Trigger…",
+	    "menu.entry.options": "Options",
 	    "menu.main.exit": "Exit",
 	    "menu.main.settings": "Settings",
+	    "menu.entry.successNotification": "Display Notification When Triggered",
 	    "menu.main.test": "Evaluate Location Triggers Now…",
 	    "menu.main.tools": "Tools",
 
@@ -146,7 +148,7 @@
 	    "menu.reset.settings": "Reset Settings…",
 	    "menu.reset.cancel": "Don't Reset",
 	    
-	    "menu.settings.back": "Back",
+	    "menu.settings.back": "Back to Home",
 	    "menu.settings.currentLocation": "Get Current Location at Startup",
 	    "menu.settings.debug": "Debug",
 	    
@@ -168,7 +170,6 @@
 	    "menu.settings.general": "General",
 	    "menu.settings.advanced": "Advanced",
 	    "menu.settings.update": "Check for Updates…",
-	    
 	    "menu.settings.reset": "Reset…",
 	    "menu.settings.tools": "Tools",
 	    "menu.settings.language": "Change Language…",
