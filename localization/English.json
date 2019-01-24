@@ -170,6 +170,7 @@
 	    "prompt.currentLocation": "Current Location:",
 	    "prompt.currentLocation.get": "Retrieving your current location. This may take a few moments.",
 	    "prompt.default.locationTrigger": "Editing Default Location Trigger",
+	    "prompt.defaultMapsApp": "Set default mapping app:",
 	    "prompt.delete": "Delete the selected location triggers? This operation cannot be undone.",
 	    "prompt.donate": "Enjoing Location Triggers for Cronios? I'd appreciate a tip!",
 	    "prompt.erase.content": "Are you sure you want to delete all Location Triggers content and settings for this device?\n\nThis operation cannot be undone. ",
