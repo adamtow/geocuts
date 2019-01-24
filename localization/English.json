@@ -172,6 +172,7 @@
 	    "menu.settings.update": "Check for Updates…",
 	    "menu.settings.reset": "Reset…",
 	    "menu.settings.tools": "Tools",
+	    "menu.settings.unlockPrompt": "Custom Unlock Prompt…",
 	    "menu.settings.language": "Change Language…",
 	    "menu.settings.wizard": "Use Location Trigger Wizard",
 	    "menu.settings.wizard.description": "Guides you when creating new Location Triggers.",
@@ -211,6 +212,7 @@
 	    "prompt.shortcut": "Choose a shortcut to run when you are within the location’s trigger radius.",
 	    "prompt.shortcut.search": "Search for a shortcut. Searches are case-sensitive.",
 	    "prompt.triggerRadius": "Enter the maximum distance in {{distance unit}} around the location where you want the trigger to occur.\n\n{{Location}}",
-	    "prompt.unlock": "You will need to unlock this device to retrieve the current location and continue evaluating your location triggers."
+	    "prompt.unlock": "You will need to unlock this device to retrieve the current location and continue evaluating your location triggers.",
+	    "prompt.unlock.edit": "Set the prompt that will be shown or spoken to you when the device is locked."
 	}
 }
