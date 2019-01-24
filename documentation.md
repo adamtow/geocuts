@@ -10,20 +10,25 @@ you want automated tasks to occur. Working in conjunction with Cronios, you will
 
 ## Location Triggers
 Location Triggers consist of the following components:
-
-- **Location**: The location where the trigger is centered on. 
-- **Trigger Radius**: Maximum distance from the location. You can specify either miles or kilometers. 
-- **Repeat**: How often the location trigger will run. You can specify:
-	- Don’t Repeat: which was cause the trigger to run once and turn itself off
-	- Repeat Daily: Runs once per calendar day
-	- Repeat Interval: Set an Interval in minutes. 
-	- Repeat Everytime: Repeats each time Location Triggers is evaluated, either by Cronios or the manually by the user. 
+- **Enabled**: The on/off switch for the Location Trigger. 
 - **Name**: The name of the location Trigger. 
+- **Location**: The location where the trigger is centered on. 
+- **Trigger Radius**: Maximum distance from the location. You can specify either miles or kilometers.
+- **Active Timeframe**: The times during the day when this Location Trigger is active. 
+- **Active Days**: The days of the week on which the Location Trigger will work. 
+- **Repeat Interval**: How long the Location Trigger must wait before being able to be triggered again at the same location. You can specify:
+	- Don’t Repeat: 
+	- Minutes:
+	- Hours: 
+	- Days: 
+	- No Delay: 
 - **Command**: The action performed when there is a location match. Right now, you can send a text message or run a shortcut. 
-- **Message**: the contents of the SMS or iMessage that will be sent when the Message command has been selected. 
-- **Recipient**: the recipient of the text message when the Message command has been selected. 
-- **Shortcut**: the shortcut to run when the location trigger is successfully matched with the device’s current location. 
-
+    - **Send a Text Message**
+        - **Message**: the contents of the SMS or iMessage that will be sent when the Message command has been selected. 
+        - **Recipient**: the recipient of the text message when the Message command has been selected. 
+    - **Run a Shortcut**
+        - **Shortcut**: the shortcut to run when the location trigger is successfully matched with the device’s current location. 
+- **Success Notification**: Displays a banner notification when the Location Trigger’s command is run. Specify false to suppress the notification. 
 
 ## How It Works
 When run by Cronios or manually Location Triggers takes the following steps:
