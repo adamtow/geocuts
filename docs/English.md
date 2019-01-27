@@ -1,31 +1,105 @@
 # Location Triggers for Cronios
+Location Triggers works with Cronios, the shortcuts scheduler for iOS, to automatically run shortcuts or send text messages based on your current location.
 
-Trigger the running of shortcuts or sending of text messages when you arrive at a location. Location Triggers for Cronios makes it easy to define a series of Location Triggers that automate tasks based on your current location. 
+You can also create new Location Triggers from the iOS Share Sheet in Maps and Contacts. 
 
-you want automated tasks to occur. Working in conjunction with Cronios, you will able to able automate 
+As Cronios lets you automate your iOS device based on time, Location Triggers does the same for locations!
 
-## Download and Installation
+## Background
+Today, you can use products like Find My Friends, Reminders, IFTTT, Launch Center Pro, and now Location Triggers for Cronios to perform some action when you enter (or exit) a location. There are pros and cons to each of these apps:
+
+- **Location Triggers**
+    - Pros: Works in the background. Automatically sends text messages and runs shortcuts. Dedicated interface for managing your Location Triggers. 
+    - Cons: Requires Cronios be running for background operation. Getting Location and sending text messages requires switching back to Shortcuts app temporarily.
+- **Find My Friends**
+    - Pros: Sends notifications automatically and works in the background.
+    - Cons: Requires recipients have Find My Friends installed and an iOS device. Cannot run shortcuts automatically. 
+- **Reminders**
+    - Pros: Works in the background.
+    - Cons: Cannot run shortcuts automatically. Requires a tap to run actions in notification banner.
+- **IFTTT**
+    - Pros: Works in the background as long as the app has been running recently. Integrates with many third-party web services.
+    - Cons: Cannot run shortcuts automatically. IFTTT app needs to be running in the background. Sometimes inconsistent triggering.  Cannot send text messages without paid third-party services. 
+- **Launch Center Pro**
+    - Pros: Lots of third-party integrations. Works in the background as long as the app has been running recently.
+    - Cons: Cannot run shortcuts automatically. LCP needs to be running in the background. Requires a tap to run actions in notification banner. Requires subscription for advanced features.
+
+## Table of Contents
+
+
+
+***
 
 ## System Requirements
+Location Triggers for Cronios requires:
+
+- iOS 12
+- Shortcuts 2.1.2 or higher
+- Cronios 1.2 or higher
+
+The following permissions need to be granted to the Shortcuts app:
+
+- Contacts (for the pretty menus)
+- Location Services
+- Notifications
+
+***
+
+## Download and Installation
+Download the latest version from RoutineHub.co:
+
+- [**Download Location Triggers for Cronios**](https://routinehub.co/shortcut/1732)
+
+When you first install Location Triggers for Cronios, you will ask to configure the following options:
+
+1. **Distance Unit**: Miles or Kilometers
+2. **Siri Language**: Used with the [Lock Detection](#lock-detection) feature, this is the language Siri will speak to you. 
+3. **Siri Voice**: The voice Siri will use to speak the Lock Detection prompt. 
+
+
+***
+
+## Creating Your First Location Trigger
+
+Let’s create your first Location Trigger by following these steps:
+
+1. Open Location Triggers for Cronios in Shortcuts.
+2. Tap New…
+3. Enter the location where you want the trigger to occur. You can specify a street address or Latitude and Longitude. 
+4. Enter your Trigger Radius, the maximum distance (in miles or kilometers) from the location where the trigger will occur. 
+5. Choose whether you want to send a text message or run a shortcut. 
+6. If you chose message, you can send to up to five recipients. 
+7. If you chose shortcut, be sure to select a background-aware shortcut. 
+8. Set the repeat schedule. By default, Location Triggers run once. You can set the Location Trigger to run according to a schedule of your design. 
+9. Tap Home. 
+10. Tap Run. 
+11. Tap Run Once…
+
+
+
+
+
+***
 
 ## Location Triggers
 Location Triggers consist of the following components:
+
 - **Enabled**: The on/off switch for the Location Trigger. 
-- **Name**: The name of the location Trigger. 
+- **Name**: The name of the Location Trigger. 
 - **Location**: The location where the trigger is centered on. 
-- **Trigger Radius**: Maximum distance from the location. You can specify either miles or kilometers.
+- **Trigger Radius**: The maximum distance from the location for the trigger to occur. The distance unit of miles or kilometers is specified from the Customize Shortcut… page. 
 - **Active Timeframe**: The times during the day when this Location Trigger is active. 
 - **Active Days**: The days of the week on which the Location Trigger will work. 
 - **Repeat Interval**: How long the Location Trigger must wait before being able to be triggered again at the same location. You can specify:
-	- Don’t Repeat: 
-	- Minutes:
-	- Hours: 
-	- Days: 
-	- No Delay: 
-- **Command**: The action performed when there is a location match. Right now, you can send a text message or run a shortcut. 
+	- **Run Once**: Once the Location Trigger runs, it turns itself off. Use this for one time events. 
+	- **Minutes**: The number of minutes you must wait before the Location Trigger becomes active again. 
+	- **Hours**: The number of hours you must wait before the Location Trigger becomes active again. 
+	- **Days**: The number of calendar days you must wait before the Location Trigger becomes active again. 
+	- **No Delay**: Repeat the command as often as Location Triggers for Cronios is called by Cronios. 
+- **Command**: The action performed when there is a location match. You can send a text message or run a [background-aware shortcut](#shortcuts). 
     - **Send a Text Message**
         - **Message**: the contents of the SMS or iMessage that will be sent when the Message command has been selected. 
-        - **Recipient**: the recipient of the text message when the Message command has been selected. 
+        - **Recipient**: the recipient(s) of the text message when the Message command has been selected. You can specify up to 5 recipients. 
     - **Run a Shortcut**
         - **Shortcut**: the shortcut to run when the location trigger is successfully matched with the device’s current location. 
 - **Success Notification**: Displays a banner notification when the Location Trigger’s command is run. Specify false to suppress the notification. 
@@ -33,21 +107,17 @@ Location Triggers consist of the following components:
 ## How It Works
 When run by Cronios or manually Location Triggers takes the following steps:
 
-1. Checks its global ON/OFF switch. If OFF, it exits. If ON, it continues to Step 2. 
-2. Checks if the device is locked using the [Lock Detection technique from Cronios](http://cronios.com#lock-detection). If the device appears locked and Lock Detection is enabled in Settjngs, provide an audible prompt to the user to unlock the device. If the device still appears to be locked, exit. Otherwise, it continued to Step 3. 
+1. Checks the global ON/OFF switch. If OFF, it exits. If ON, it continues to Step 2. 
+2. Checks if the device is locked using the [Lock Detection technique from Cronios](http://cronios.com#lock-detection). If the device appears locked and Lock Detection is enabled in Settings, an audible prompt or banner notification with sound appears is presented to the user to unlock the device. If the device still appears to be locked after 10 seconds, exit. Otherwise, continue to Step 3. 
 3. Notifies the user that an app switch is about to occur. 
-4. Switches to the Shortcuts app. To retrieve the current location and send a text message, Shortcuts must be the front most application. 
-5. Retrieved the current location of the device. This may take several seconds. 
-6. Iterates through all of your Location Triggers and sees if the current location lies within the radius of your trigger.
+4. Switches to the Shortcuts app. To retrieve the current location and send messages, Shortcuts must be the frontmost application. 
+5. Retrieves the current location of the device. This may take several seconds. 
+6. Iterates through all active and available Location Triggers and determines whether the current location lies within the radius of each trigger.
 7. For each match, run the command assigned to the trigger: run a shortcut or send a text message. 
 8. Exits and returns control back to Cronios or the user. 
 
 ## Balancing the Frequency of Checks
-Because retrieving the device location and sending the text message currently requires a switch back to the Shortcuts app
+Because retrieving the device location and sending messages currently requires a switch back to the Shortcuts app, you should be careful how often you call Location Triggers for Cronios in Cronios itself. 
 
-## Alternatives
-Here are some alternatives to using Location Triggers for Cronios:
+Importing the cron job lets you choose from check intervals of 5, 15, and 30 minutes. You can further adjust the schedule from within Cronios. 
 
-- **IFTTT**: Requires an IFTTT account, the iOS app, and that the app has been opened within past day (not force quit). 
-- **Launch Center Pro**: 
-- **Find My Friends**: 
