@@ -6,11 +6,11 @@ You can also create new Location Triggers from the iOS Share Sheet in Maps and C
 As Cronios lets you automate your iOS device based on time, Location Triggers does the same for locations!
 
 ## Background
-Today, you can use products like Find My Friends, Reminders, IFTTT, Launch Center Pro, and now Location Triggers for Cronios to perform some action when you enter (or exit) a location. There are pros and cons to each of these apps:
+Today, you can use apps like Find My Friends, Reminders, IFTTT, Launch Center Pro, and now Location Triggers for Cronios to perform some action when you enter or exit a location. There are pros and cons to each of these apps:
 
 - **Location Triggers**
     - Pros: Works in the background. Automatically sends text messages and runs shortcuts. Dedicated interface for managing your Location Triggers. 
-    - Cons: Requires Cronios be running for background operation. Getting Location and sending text messages requires switching back to Shortcuts app temporarily.
+    - Cons: Requires Cronios be running for background operation. Getting Location and sending text messages requires switching back to Shortcuts app.
 - **Find My Friends**
     - Pros: Sends notifications automatically and works in the background.
     - Cons: Requires recipients have Find My Friends installed and an iOS device. Cannot run shortcuts automatically. 
@@ -22,7 +22,7 @@ Today, you can use products like Find My Friends, Reminders, IFTTT, Launch Cente
     - Cons: Cannot run shortcuts automatically. IFTTT app needs to be running in the background. Sometimes inconsistent triggering.  Cannot send text messages without paid third-party services. 
 - **Launch Center Pro**
     - Pros: Lots of third-party integrations. Works in the background as long as the app has been running recently.
-    - Cons: Cannot run shortcuts automatically. LCP needs to be running in the background. Requires a tap to run actions in notification banner. Requires subscription for advanced features.
+    - Cons: Cannot run shortcuts automatically. Needs to be running in the background. Requires a tap to run actions in notification banner. Requires subscription for advanced features.
 
 ## Table of Contents
 
@@ -35,7 +35,7 @@ Location Triggers for Cronios requires:
 
 - iOS 12
 - Shortcuts 2.1.2 or higher
-- Cronios 1.2 or higher
+- Cronios 1.2.1 or higher
 
 The following permissions need to be granted to the Shortcuts app:
 
@@ -55,7 +55,6 @@ When you first install Location Triggers for Cronios, you will ask to configure 
 1. **Distance Unit**: Miles or Kilometers
 2. **Siri Language**: Used with the [Lock Detection](#lock-detection) feature, this is the language Siri will speak to you. 
 3. **Siri Voice**: The voice Siri will use to speak the Lock Detection prompt. 
-
 
 ***
 
