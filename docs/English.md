@@ -56,6 +56,8 @@ When you first install Location Triggers for Cronios, you will ask to configure 
 2. **Siri Language**: Used with the [Lock Detection](#lock-detection) feature, this is the language Siri will speak to you. 
 3. **Siri Voice**: The voice Siri will use to speak the Lock Detection prompt. 
 
+>You can change the Lock Detection prompt your iOS device speaks to you from Settings. 
+
 ***
 
 ## Creating Your First Location Trigger
