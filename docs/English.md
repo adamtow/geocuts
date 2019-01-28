@@ -59,24 +59,38 @@ When you first install Location Triggers for Cronios, you will ask to configure 
 ***
 
 ## Creating Your First Location Trigger
+Let’s create your first Location Trigger.
 
-Let’s create your first Location Trigger by following these steps:
+>First be sure you run Location Triggers for Cronios from the Shortcuts Home screen. With over 3,300 action steps, running it from the Shortcuts edit screen will be very slow.
 
-1. Open Location Triggers for Cronios in Shortcuts.
-2. Tap New…
-3. Enter the location where you want the trigger to occur. You can specify a street address or Latitude and Longitude. 
-4. Enter your Trigger Radius, the maximum distance (in miles or kilometers) from the location where the trigger will occur. 
+Once Location Triggers for Cronios is open, follow these steps:
+
+1. Tap New…
+2. Enter the location where you want the trigger to occur. You can specify a street address or Latitude and Longitude. For now, enter the special string `{{Current Location}}` to create a Location Trigger that always runs wherever you are.
+3. Choose whether your trigger runs by entering or exiting the location. 
+4. Enter the maximum distance (in miles or kilometers) from the location where the trigger will occur. 
 5. Choose whether you want to send a text message or run a shortcut. 
 6. If you chose message, you can send to up to five recipients. 
-7. If you chose shortcut, be sure to select a background-aware shortcut. 
-8. Set the repeat schedule. By default, Location Triggers run once. You can set the Location Trigger to run according to a schedule of your design. 
-9. Tap Home. 
-10. Tap Run. 
-11. Tap Run Once…
+7. If you chose shortcut, be sure to select a [background-aware shortcut](#background-aware-shortcuts). 
+8. Set active times and days for your Location Trigger. You can for instance, set up a trigger to only run from 8 a.m. to 10:00 a.m. on Monday through Friday. 
+9. Set how long the Location Trigger must wait after running to run again. 
+10. Enter a name for your new Location Trigger. 
+11. Tap Home. 
+12. Tap Run. 
+13. Tap Run Once…
 
+Location Triggers for Cronios will now perform the following tasks automatically:
 
+1. Retrieve your current location. 
+2. Evaluate each Location Trigger to see if we can run it. 
+3. Compare each valid Location Trigger’s location with the current location. 
+4. Run shortcuts or send text messages for all matching Location Triggers. 
 
+By itself, Location Triggers for Cronios is a great tool for organizing all of your location based shortcuts.
 
+>Using the included Location Triggers Share shortcut, you can create a Siri phrase to run Location Triggers for Cronios in Run Once Mode by saying, “Run My Location Triggers” or “Evaluate My Current Location.” 
+
+When paired with Cronios, however, it gains tremendous power by being able to run shortcuts or send text messages automatically based on your current location. 
 
 ***
 
@@ -120,3 +134,40 @@ Because retrieving the device location and sending messages currently requires a
 
 Importing the cron job lets you choose from check intervals of 5, 15, and 30 minutes. You can further adjust the schedule from within Cronios. 
 
+## Settings
+Location Triggers for Cronios features many settings to customize its operation to your personal preferences. 
+
+### General
+
+- Show Description Labels
+- Use Location Trigger Assistant
+- Use Quick Menu
+
+### Defaults
+
+- Set Default Mapping App
+- Edit Default Location Trigger
+
+### Current Location
+
+- Use Get Current Weather
+- Get Current Location at Startup
+
+### Lock Detection
+- Enable Lock Detection
+- Audibly Ask to Unlock Device
+- Custom Unlock Prompt
+
+### Advanced
+
+- Enable Logs
+- Enable Location Log
+- Debug
+
+### Tools
+
+- Install Share Sheet Helper
+- View Logs
+- Check For Updates
+- Change Language
+- Reset
