@@ -1,28 +1,28 @@
 # GeoCuts
-GeoCuts works with Cronios, the shortcuts scheduler for iOS, to automatically run shortcuts or send text messages based on your current location.
+GeoCuts automatically runs your shortcuts or sends text messages using your current location. As Cronios introduced a new method for automatically running your shortcuts based on time, GeoCuts does the same for location!
 
-You can also create new GeoCuts location triggers from the iOS Share Sheet in Maps and Contacts. 
-
-As Cronios lets you automate your iOS device based on time, GeoCuts does the same for locations!
+You can also create new GeoCuts location triggers from the iOS Share sheet in Maps and Contacts. 
 
 ## Background
-Today, you can use apps like Find My Friends, Reminders, IFTTT, Launch Center Pro, and now GeoCuts to perform some action when you enter or exit a location. There are pros and cons to each of these apps:
+GeoCuts addresses the problem of  automatically running shortcuts based on your location. While there are a number of great apps that let you create location triggers — Find My Friends, Reminders, IFTTT, and Launch Center Pro — none of them can run a shortcut without you having to tap on a notification banner. 
+
+Here are some pros and cons for each app:
 
 - **GeoCuts**
     - Pros: Works in the background. Automatically sends text messages and runs shortcuts. Dedicated interface for managing your location triggers. 
     - Cons: Requires Cronios be running for background operation. Getting Location and sending text messages requires switching back to Shortcuts app.
 - **Find My Friends**
-    - Pros: Sends notifications automatically and works in the background.
+    - Pros: Sends notifications automatically and works invisibly in the background.
     - Cons: Requires recipients have Find My Friends installed and an iOS device. Cannot run shortcuts automatically. 
 - **Reminders**
-    - Pros: Works in the background.
-    - Cons: Cannot run shortcuts automatically. Requires a tap to run actions in notification banner.
+    - Pros: Works invisibly in the background.
+    - Cons: Requires a tap to run shortcut links in notification banners.
 - **IFTTT**
-    - Pros: Works in the background as long as the app has been running recently. Integrates with many third-party web services.
-    - Cons: Cannot run shortcuts automatically. IFTTT app needs to be running in the background. Sometimes inconsistent triggering.  Cannot send text messages without paid third-party services. 
+    - Pros: Works in the background as long as the app has been running recently. Integrates with many third-party web services and some native iOS applications. 
+    - Cons: Cannot run shortcuts automatically. IFTTT app needs to be running in the background or you can get  inconsistent triggering.
 - **Launch Center Pro**
     - Pros: Lots of third-party integrations. Works in the background as long as the app has been running recently.
-    - Cons: Cannot run shortcuts automatically. Needs to be running in the background. Requires a tap to run actions in notification banner. Requires subscription for advanced features.
+    - Cons: Needs to be running in the background. Requires a tap to run actions in notification banner. Requires subscription for advanced features.
 
 ## Table of Contents
 
@@ -50,13 +50,23 @@ Download the latest version from RoutineHub.co:
 
 - [**Download GeoCuts**](https://routinehub.co/shortcut/1732)
 
-When you first install GeoCuts, you will ask to configure the following options:
+When you first install GeoCuts, the Customize Shortcuts screen will appear and ask you the following questions:
 
-1. **Distance Unit**: Miles or Kilometers
-2. **Siri Language**: Used with the [Lock Detection](#lock-detection) feature, this is the language Siri will speak to you. 
-3. **Siri Voice**: The voice Siri will use to speak the Lock Detection prompt. 
+1. **Siri Language**: Used with the [Lock Detection](#lock-detection) feature, this is the language Siri will speak to you. 
+2. **Siri Voice**: The voice Siri will use to speak the Lock Detection prompt. 
 
 >You can change the Lock Detection prompt your iOS device speaks to you from Settings. 
+
+Next, GeoCuts will ask you a series of setup questions:
+
+- **Language**: GeoCuts is fully localized and ready to be translated in your language. Read the section on localization for more details. 
+- **Distance Unit**: Choose between Kilometers or Miles when entering Trigger Radius values. 
+- Current Location Method: 
+- Default Mapping App: 
+- Lock Detection: 
+- Logging: 
+- Cronios: 
+- Next: Create a new location trigger, read the documentation, or go to the GeoCuts Home. 
 
 ***
 
