@@ -136,6 +136,43 @@ Because retrieving the device location and sending messages currently requires a
 
 Importing the cron job lets you choose from check intervals of 5, 15, and 30 minutes. You can further adjust the schedule from within Cronios. 
 
+
+## GeoCuts Helper
+The GeoCuts Helper shortcut does two things:
+
+1. Creates new location triggers from Contacts, Map Links, and Locations using the iOS Share sheet.
+2. Calls the `Run Once` function of GeoCuts. Add a Siri phrase for this shortcut or add GeoCuts Helper to the iOS Home screen for one step access to evaluating your location triggers.
+
+![GeoCuts Helper creates new location triggers from the iOS Share sheet.](https://adamtow.github.io/geocuts/images/geocuts-helper.png)
+
+To install GeoCuts Helper, follow these steps:
+
+1. Tap `Settings…` from the GeoCuts Home screen.
+2. Tap `Install GeoCuts Helper Shortcut…`.
+3. Tap `Open` or `Tap to Install GeoCuts Helpers`.
+
+![Installing the GeoCuts Helper shortcut.](https://adamtow.github.io/geocuts/images/geocuts-helper-install.png)
+
+### Using GeoCuts Helper from the iOS Share Sheet
+You can use GeoCuts Helper from the iOS Share sheet in the Maps and Contacts applications to create new location triggers.
+
+1. Tap Share
+2. Choose GeoCuts Helper
+
+GeoCuts Helper will launch GeoCuts and create a new location trigger based on the address you're looking at in Maps or the current contact card in Contacts.
+
+### Evaluate Your Location Triggers
+Tapping on GeoCuts Helper from the Shortcuts screen will cause GeoCuts to evaluate all of your location triggers. For even faster access, add GeoCuts Helper to your iOS Home screen and add a Siri phrase.
+
+1. From the Shortcuts home screen, tap the edit button in GeoCuts Helper.
+2. Tap the Settings icon in the upper-right.
+3. Tap `Add to Siri` and follow the on-screen directions.
+4. Tap `Add to Home Screen` and follow the on-screen directions.
+
+![Installing the GeoCuts Helper shortcut.](https://adamtow.github.io/geocuts/images/geocuts-helper-siri-home.png)
+
+***
+
 ## Settings
 GeoCuts features many settings to customize its operation to your personal preferences. 
 
