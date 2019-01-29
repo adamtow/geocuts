@@ -186,6 +186,7 @@
 	    "menu.settings.lockDetection.description": "Prompts to unlock device before monitoring.",
 	    "menu.settings.lockDetection.description.off": "Monitoring disabled when screen is off.",
 	    "menu.settings.lockDetection.label": "Lock Detection",
+	    "menu.settings.lockDetection.mute": "Don't Evaluate if Device is Muted",
 	    "menu.settings.lockDetectionVoice": "Audibly Ask to Unlock Your Device",
 	    "menu.settings.lockDetectionVoice.description.off": "A notification banner will prompt you to unlock.",
 	    "menu.settings.log": "Enable Logs",
