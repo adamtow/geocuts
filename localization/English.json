@@ -20,6 +20,8 @@
 	    "error.cronios.title": "Cronios Not Installed",
 	    "error.location.invalid": "One or more of your location triggers has an invalid location. You must correct this before location trigger monitoring can work.",
 	    "error.location.invalid.title": "Invalid Location Detected",
+	    "error.offline": "You must be connected to the internet for this feature of GeoCuts to work.",
+	    "error.offline.title": "No Network Connection",
 	    "error.repeatInterval": "Repeat Interval cannot be a negative number. Setting Repeat Interval to minimum value of 1.",
 	    "error.repeatInterval.title": "Repeat Interval Error",
 	    "error.triggerRadius": "Trigger Radius cannot be a negative number.",
@@ -166,6 +168,7 @@
 	    "menu.settings.advanced": "Advanced",
 	    "menu.settings.back": "Back to Home",
 	    "menu.settings.clearLogs": "Clear Logs…",
+	    "menu.settings.clear.shortcutIcons": "Clear Shortcuts Icons Cache",
 	    "menu.settings.currentLocationStartup": "Get Current Location at Startup",
 	    "menu.settings.currentLocation.label": "Current Location",
 	    "menu.settings.currentWeather": "Use Get Current Weather",
@@ -178,6 +181,7 @@
 	    "menu.settings.defaults": "Defaults",
 	    "menu.settings.descriptionLabels": "Show Description Labels",
 	    "menu.settings.descriptionLabels.description": "Displays trigger options on Home screen",
+	    "menu.settings.export": "Export Location Triggers…",
 	    "menu.settings.general": "General",
 	    "menu.settings.helper": "Install GeoCuts Helper Shortcut…",
 	    "menu.settings.home": "Back to Home",
@@ -200,6 +204,9 @@
 	    "menu.settings.quickEdit.description": "Tap a location trigger to see an edit menu.",
 	    "menu.settings.quickEdit.description.off": "Tap a location trigger to edit it.",
 	    "menu.settings.reset": "Reset…",
+	    "menu.settings.switchToShortcutsImmediately": "Switch to Shortcuts Immediately",
+	    "menu.settings.switchToShortcutsImmediately.description": "Immediately switch to Shortcuts while running.",
+	    "menu.settings.switchToShortcutsImmediately.description.off": "Notify and wait 2 seconds before switching.",
 	    "menu.settings.tools": "Tools",
 	    "menu.settings.unlockPrompt": "Custom Unlock Prompt…",
 	    "menu.settings.update": "Check for Updates…",
@@ -274,6 +281,6 @@
 	    "prompt.unlock": "You will need to unlock this device to retrieve the current location and continue evaluating your location triggers.",
 	    "prompt.unlock.edit": "Enter the prompt that will be shown or spoken to you when your device is locked.",
 	    "prompt.update": "GeoCuts {{version}} is available. Would you like to download it now?\n\nRelease Notes\n{{notes}}",
-	    "prompt.viewLogs": "GeoCuts Logs"
+	    "prompt.viewLogs": "GeoCuts Logs",
 	}
 }
