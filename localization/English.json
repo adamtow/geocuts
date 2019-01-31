@@ -12,6 +12,8 @@
 	    "alert.reminder.created": "You will be reminded to run GeoCuts in order to run:",
 	    "alert.setup.complete": "GeoCuts is ready to run shortcuts and send messages based on your location.\n\nYou can run your location triggers manually at any time by tapping Run Once.\n\nIf you want to automatically monitor your locations throughout the day, you must install Cronios and add the GeoCuts cron job.\n\nTap Help… from the GeoCuts Home screen to learn how to do this and more. Enjoy using GeoCuts!",
 	    "alert.setup.complete.title": "Set Up Complete!",
+	    "alert.setup.helper": "Use the GeoCuts Helper shortcut from the iOS Home screen or Siri to immediately evaluate your location triggers.\n\nIn Maps and Contacts, add new location triggers to GeoCuts by choosing Shortcuts > GeoCuts Helper from the iOS Share Sheet.\n\nInstall GeoCuts Helper from the top of GeoCuts Home or from Settings.",
+	    "alert.setup.helper.title": "GeoCuts Helper",
 	    "alert.shortcuts.retrieval": "Retrieving a list of your shortcuts. This may take a few moments.",
 	    "alert.success": "The `{{Location Trigger}}` location trigger successfully ran.",
 	    "alert.update.none": "You are currently running the latest version of GeoCuts.",
@@ -51,6 +53,8 @@
 	    "menu.bulkEdit.enable": "Enable",
 	    "menu.currentLocation.confirm": "OK",
 	    "menu.currentLocation.dontShowAgain": "OK, and Don't Show Again",
+	    "menu.distanceUnit.convert": "Convert",
+	    "menu.distanceUnit.cancel": "Dont't Convert",
 	    "menu.donate.already": "I've Already Donated",
 	    "menu.donate.confirm": "Donate Now",
 	    "menu.donate.later": "Donate Later",
@@ -244,6 +248,8 @@
 	    "prompt.default.locationTrigger": "Editing Default Location Trigger",
 	    "prompt.delete": "Delete the selected location trigger? This operation cannot be undone.",
 	    "prompt.delete.plural": "Delete the selected location triggers? This operation cannot be undone.",
+	    "prompt.distanceUnit.kilometersToMiles": "Would you like to convert the trigger radius values for your existing location triggers from kilometers to miles?",
+	    "prompt.distanceUnit.milesToKilometers": "Would you like to convert the trigger radius values for your existing location triggers from miles to kilometers?",
 	    "prompt.donate": "Enjoing GeoCuts? I'd appreciate a tip!",
 	    "prompt.erase.content": "Are you sure you want to delete all GeoCuts content and settings for this device?\n\nThis operation cannot be undone. ",
 	    "prompt.erase.content2": "Are you ABSOLUTELY SURE you want to delete all GeoCuts content and settings for this device?\n\nThis operation cannot be undone.",
@@ -289,6 +295,6 @@
 	    "prompt.unlock": "You will need to unlock this device to retrieve the current location and continue evaluating your location triggers.",
 	    "prompt.unlock.edit": "Enter the prompt that will be shown or spoken to you when your device is locked.",
 	    "prompt.update": "GeoCuts {{version}} is available. Would you like to download it now?\n\nRelease Notes\n{{notes}}",
-	    "prompt.viewLogs": "GeoCuts Logs",
+	    "prompt.viewLogs": "GeoCuts Logs"
 	}
 }
