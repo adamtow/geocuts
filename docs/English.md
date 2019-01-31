@@ -50,23 +50,35 @@ Download the latest version from RoutineHub.co:
 
 - [**Download GeoCuts**](https://routinehub.co/shortcut/1732)
 
-When you first install GeoCuts, the Customize Shortcuts screen will appear and ask you the following questions:
+When you first install GeoCuts, there will be two phases to set up:
+
+1. Customize Shortcut
+2. GeoCuts Setup
+
+### Customize Shortcut
+The Customize Shortcuts screen will appear and ask you the following questions:
 
 1. **Siri Language**: Used with the [Lock Detection](#lock-detection) feature, this is the language Siri will speak to you. 
 2. **Siri Voice**: The voice Siri will use to speak the Lock Detection prompt. 
 
->You can change the Lock Detection prompt your iOS device speaks to you from Settings. 
+![GeoCuts Customize Shortcut](https://adamtow.github.io/geocuts/images/geocuts-Customize-shortcut.png)
 
-Next, GeoCuts will ask you a series of setup questions:
+>It may take a few seconds for the Customize Shortcuts screen to disappear when you hit Done. GeoCuts is a very large shortcut (nearly 4,000 actions), and the Shortcuts app seems to take a while updating the Siri Language and Voice actions. 
 
-- **Language**: GeoCuts is fully localized and ready to be translated in your language. Read the section on localization for more details. 
+### GeoCuts Setup
+Next, GeoCuts will ask you a series of setup questions. You can change all of these settings later in GeoCuts Settings. 
+
+- **Language**: GeoCuts comes pre-installed for English, but it is fully localized and ready to be translated in your language. [Read the section on localization for more details.](#localization) 
 - **Distance Unit**: Choose between Kilometers or Miles when entering Trigger Radius values. 
-- Current Location Method: 
-- Default Mapping App: 
-- Lock Detection: 
-- Logging: 
-- Cronios: 
-- Next: Create a new location trigger, read the documentation, or go to the GeoCuts Home. 
+- **Current Location Method**: GeoCuts uses one of two methods for retrieving your current location. Get Current Weather is fast but less accurate than the slower but more precise Get Current Location.
+- **Default Mapping App**: GeoCuts works with Apple Maps, Google Maps, and Waze. Make sure you have the last two installed if you want to use them. Otherwise, GeoCuts will give an error when trying to open them. 
+- **Lock Detection**: When [running in the background via Cronios](#cronios), GeoCuts can detect when your device is locked and the screen is off. GeoCuts can then prompt you to unlock the device in order to evaluate your location triggers. You can also customize the unlock prompt if you changed your Siri Voice and Language in the Customize Shortcut portion of setup.  
+- **Logging**: Choose the level of logging you would like GeoCuts to perform. Basic provides just information on the shortcuts that have run via GeoCuts. Extended records all the locations that GeoCuts has been run from. Developer provides detailed information to help you develop your location triggers. 
+- **GeoCuts Helper**; Information on the GeoCuts Helper shortcut will be shown. Use this shortcut from the iOS Home screen to immediately evaluate your location triggers or from iOS Share Sheet to add new location triggers to GeoCuts. 
+- **Cronios**: Information on how to use GeoCuts with Cronios to automatically run shortcuts or send text messages based on your location will be shown next.  
+- **Setup Complete**: Create a new location trigger, add the GeoCuts cron job to Cronios, read the documentation, or go to the GeoCuts Home. 
+
+
 
 ***
 
@@ -269,3 +281,6 @@ GeoCuts features many settings to customize its operation to your personal prefe
 - Check For Updates
 - Change Language
 - Reset
+
+<span id="localization"></span> 
+## Localization
