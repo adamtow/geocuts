@@ -3,9 +3,9 @@ GeoCuts automatically runs your shortcuts or sends text messages based on your c
 
 As Cronios introduced a new method for automatically running your shortcuts based on time, GeoCuts does the same for location!
 
-Imagine some of the things you can now do with GeoCuts:
+Imagine some of the things GeoCuts enables:
 
-- Define a running path to play your favorite songs at key areas or inform your loved ones on your progress.  
+- Like to run? Define a running path to play your favorite songs at key areas or inform your loved ones on your progress.  
 - Let you know when you enter an area where you took one of your favorite photos or experienced one of your fondest memories.
 - Automatically run important tasks when you enter or exit a location. 
 
@@ -179,28 +179,48 @@ Location triggers consist of the following components:
 ## Exploring the GeoCuts Interface
 When you open to the GeoCuts Home screen, you're presented with the following sections of information:
 
+### Next Steps
+These actions appear after you installed GeoCuts or if you have reset your settings.
+
 - **Install GeoCuts Helper**: Adds the Helper shortcut to Shortcuts. This option disappears when you have run the command (you can find it again in Settings). 
 - **Add/Update GeoCuts Cron Job to Cronios**: Opens Cronios and adds a cron job for GeoCuts at a check frequency of your choosing. This option moves to the bottom of the Home screen when you first run it. Updating an existing GeoCuts cron job requires Cronios 1.2 or higher.
+
+### Actions
+These menu items control the running and evaluation of GeoCuts.
+
 - **Enable/Disable Monitoring**: A global ON/OFF switch for GeoCuts. If disabled, you will not be able to monitor your location triggers from Cronios or the GeoCuts Helper shortcut.
 - **Run Continously Via Cronios**: Launches Cronios in "Run Continuously" mode. If you've added the GeoCuts cron job to Cronios, it will automatically run on the schedule that you have assigned. [Learn more about Cronios and Geocuts here](#cronios).
 - **Run Once**: Evaluates your location triggers based on your current location. Returns to the GeoCuts Home screen when done.
-- **Open Maps After Running**: If you are actively using a mapping application like Maps, Google Maps, or Wave, you can enable this setting to return to the designated app after evaluating your location triggers. Learn more about this feature in the [Open Maps After Running](#open-maps-after-running) section.
-- **Run Only Filtered Location Triggers**: If Enabled, only location triggers matching your current filter will be evaluated and run. 
-- **Get Current Location**: Retrieves your current location using either the [Get Current Weather or Get Current Location action](#current-location).
+- **Open Maps After Running**: If you are actively using a mapping application like Maps, Google Maps, or Wave for turn-by-turn directions, you can enable this setting to return to the app after evaluating your location triggers. Learn more about this feature in the [Open Maps After Running](#open-maps-after-running) section.
+- **Run Only Filtered Location Triggers**: If Enabled, only location triggers matching your current tag filter will be evaluated and run. [Learn more here about tags here](#tags).
+- **Get Current Location**: Retrieves your current location using either the [Get Current Location or Get Current Weather action](#current-location).
 - **Show Current/Last Location**: Displays either your current location or your last location in your default mapping application.
 - **New Location Trigger**: Creates a new location trigger. Opens to the Location Trigger Assistant if that preferences has been set, the location trigger edit screen if not. [Learn more about creating location triggers](#creating-location-triggers).
-- **Filter**: Choose which location triggers appear in the Home list by filtering based on tags. Currently, this only affects what items are displayed in the Home screen. When running, GeoCuts will evaluate all of your active location triggers. 
-- **List of Your Location Triggers**: This section lists all of your location triggers, filtered by tag and sorted by enabled status and name.
+- **Filter**: Choose which location triggers appear in the Home list by filtering based on tags. Depending on the **Run Only Filtered Location Triggers** settings, all location triggers or only those visible will be evaluated when GeoCuts runs.
+- **List of Your Location Triggers**: This section lists all of your location triggers, filtered by tag and sorted by enabled status and name. [This section details the information](#location-triggers-information) you see in each location trigger row.
 - **Bulk Edit**: Allows you to choose and edit multiple location triggers from your list.
 - **Bulk Edit All**: Performs an operation on all of your location triggers.
+- **Update GeoCuts Cron Job in Cronios**: Once you've added the GeoCuts Cron Job to Cronios, this menu item will appear. It allows you to re-export the cron job back to Cronios and replace the existing cron job with the new one.
+
+### GeoCuts
+
 - **About**: Displays the GeoCuts about screen, which contains version and build number information.
 - **Help**: Displays the GeoCuts Help documentation on GitHub. Requires internet access to retrieve documentation.
 - **Tip Jar**: Like GeoCuts? I'd appreciate a tip or donation!
 - **Settings**: Opens to the [GeoCuts Settings page](#settings).
 
+### Location Trigger Information
+By default, each location trigger shows the following information:
+
+- **Name**: The name of the location trigger.
+- 🎯 - Your location trigger is in range. It will be evaluated if you run GeoCuts. This icon appears if you have retrieved the Current Location in the app.
+- ⬅️ - Denotes an exit location trigger. The location trigger will run after detecting you have entered the specified location.
+- **Location**: The location where the entrance or exit trigger will occur.
+
+![Minimal description labels next to each location trigger.](https://adamtow.github.io/geocuts/images/geocuts-description-labels.png)
+
 Enabling **Show Description Labels** option in Settings will display additional icons next to your location trigger's location.
 
-- 🎯 - Your location trigger is in range. It will be evaluated if you run GeoCuts.
 - ▶️ - The location trigger will run a shortcut.
 - 💬 - The location trigger will send a text message.
 - ♾ - The location trigger will run every time Cronios successfully evaluates GeoCuts.
@@ -208,8 +228,10 @@ Enabling **Show Description Labels** option in Settings will display additional 
 - 1️⃣ - The location trigger has been set up to run once before disabling itself.
 - ⏰ - The location trigger has been set up to run every X hours.
 - ⏲ - The location trigger has been set up to run every X minutes.
-- 🏃‍♀️ - Denotes an active exit trigger. The user must first enter the zone in order to activate the exit trigger.
+- 🏃‍♀️ - Denotes an active exit trigger. The user must have first entered the zone for this icon to become visible.
 - **Trigger radius**: The current trigger radius value in kilometers or miles. 
+
+![Additional description labels for each location trigger are shown when you enable the **Show Description Labels** preference in Settings.](https://adamtow.github.io/geocuts/images/geocuts-description-labels.png)
 
 ***
 
@@ -217,7 +239,7 @@ Enabling **Show Description Labels** option in Settings will display additional 
 ## Creating Location Triggers
 We have already seen how the [Location Trigger Assistant](#assistant) guides you in creating a new Location Trigger.
 
->If you prefer, you can turn off the Assistant from Settings. 
+>If you prefer, you can turn off the Assistant from Settings. Tapping on New Location Trigger from the home screen will load up the default location trigger template and display the Edit Location Trigger screen. From there you can adjust whatever setting you want in the new location trigger.
 
 If you want to add multiple locations at a time, GeoCuts currently supports two methods:
 
@@ -226,7 +248,11 @@ If you want to add multiple locations at a time, GeoCuts currently supports two 
 
 In both cases, GeoCuts will do its best to extract any addresses from the inputted data. If multiple locations were found, it will present a menu allowing you to choose which locations to import. 
 
-If you choose to import multiple items, they will use settings from the [Default Location Trigger template](#default-template), although you will get a chance to edit the location and name of each new location trigger prior to import. 
+If you choose to import multiple items, they will inherit settings from the [Default Location Trigger template](#default-template), although you will get a chance to modify the following settings:
+
+- **Name**: Set the name of each location trigger individually.
+- **Location**: Tweak the location before saving the location trigger.
+- **Command**: You can choose to use the default command or apply a single command (text message or shortcut) to every location being imported.
 
 By using one of these two methods, you can quickly add multiple location triggers at once, which is useful if you are:
 
@@ -234,9 +260,6 @@ By using one of these two methods, you can quickly add multiple location trigger
 - Traveling by car and want to know when you enter (or exit) a city, state, or zone. 
 - Remembering the locations where you took your favorite photos or experienced your most rewarding memories.
 - Creating zones where certain tasks have to occur. 
-
-
-
 
 <span id="cronios"></span>
 ## Cronios and GeoCuts
@@ -289,6 +312,28 @@ Tapping on GeoCuts Helper from the Shortcuts screen will cause GeoCuts to evalua
 GeoCuts is highly configurable. From the Settings page (access from the bottom of the Home screen), you can adjust the following options in GeoCuts.
 
 ### General
+
+- Launch Action
+- Use Location Trigger Assistant
+- Show Description Labels
+- Use Quick Edit Menu
+
+#### Launch Actions
+You can configure what GeoCuts does when you tap on its icon from the Shortcuts Home screen.
+
+- **GeoCuts Home**: Displays the GeoCuts Home screen.
+- **New Location Trigger**: Creates a new location trigger.
+- **Run Once**: Evaluates your location triggers and returns to the GeoCuts Home screen.
+- **Show Menu**: Displays a menu with the three options above.
+
+#### Use Location Trigger Assistant
+The Location Trigger Assistant guides you in creating new location triggers. If you want to go directly to the location trigger edit screen, disable this option.
+
+#### Show Description Labels
+Displays additional information about a location trigger in the description area below the name (on the GeoCuts Home page).
+
+![Description labels for each location trigger.](https://adamtow.github.io/geocuts/images/geocuts-description-labels.png)
+
 
 <span id="current-location"></span>
 ### Current Location
