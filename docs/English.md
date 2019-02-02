@@ -18,17 +18,19 @@ Each location trigger has its own schedule — hours of operation and active day
 You can also create new GeoCuts location triggers directly from the iOS Share sheet using the GeoCuts Helper shortcut. 
 
 ## Features
+Here are just a few of the exciting features in GeoCuts:
 
+-
 
 
 
 ## Background
-GeoCuts addresses the problem of  automatically running shortcuts based on your location. While there are a number of great apps that let you create location triggers -- Find My Friends, Reminders, IFTTT, and Launch Center Pro -- none of them can run a shortcut without you having to tap on a notification banner. 
+GeoCuts addresses the problem of that you can't automatically running shortcuts based on your location. While there are a number of great apps that let you create location triggers -- Find My Friends, Reminders, IFTTT, and Launch Center Pro -- none of them can run a shortcut without you having to tap on a notification banner. 
 
 Here are some pros and cons for each app:
 
 - **GeoCuts**
-    - Pros: Works in the background. Automatically sends text messages and runs shortcuts. Dedicated interface for managing your location triggers. 
+    - Pros: Works in the background. Automatically runs shortcuts and sends text messages. Dedicated interface for managing your location triggers. 
     - Cons: Requires Cronios be running for background operation. Getting Location and sending text messages requires switching back to Shortcuts app.
 - **Find My Friends**
     - Pros: Sends notifications automatically and works invisibly in the background.
@@ -377,6 +379,22 @@ There are two methods for retrieving the current location.
 - Check For Updates
 - Change Language
 - Reset
+
+<span id="developers"></span>
+## Developers
+GeoCuts sends a special GeoCuts dictionary to all shortcuts that it calls from a location trigger. The GeoCuts dictionary has the following fields defined:
+
+- **GeoCuts**: A boolean value true means the shortcut is being run from GeoCuts.
+- **Name**: The name of the location trigger.
+- **Location**: The current location.
+- **Exit**: A boolean value of true means the shortcut is an exit trigger.
+- **Trigger Radius**: The maximum distance from the location that the device could be in.
+- **Last Run**: The date the location trigger last ran.
+- **Distance Unit**: The user's distance unit, Miles or Kilometers.
+- **Distance Unit String**: The distance unit as a localized string.
+- **Online**: Whether the iOS device is online and connected to the internet.
+
+With the information in the GeoCuts dictionary, you can perform many custom actions. 
 
 <span id="localization"></span> 
 ## Localization
