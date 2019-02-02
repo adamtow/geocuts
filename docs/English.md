@@ -261,6 +261,8 @@ By using one of these two methods, you can quickly add multiple location trigger
 - Remembering the locations where you took your favorite photos or experienced your most rewarding memories.
 - Creating zones where certain tasks have to occur. 
 
+*** 
+
 <span id="cronios"></span>
 ## Cronios and GeoCuts
 Take GeoCuts to the next level by pairing it with [Cronios, the shortcuts scheduler for iOS](http://cronios.com). Cronios automatically runs your shortcuts in the background on a schedule of your design. 
@@ -274,7 +276,7 @@ Importing the cron job lets you choose from check intervals of 5, 15, and 30 min
 ## GeoCuts Helper
 The GeoCuts Helper shortcut does two things:
 
-1. Creates new location triggers from Contacts, Map Links, and Locations using the iOS Share sheet.
+1. Creates new location triggers in GeoCuts from the iOS Share sheet.
 2. Calls the `Run Once` function of GeoCuts. Add a Siri phrase for this shortcut or add GeoCuts Helper to the iOS Home screen for one step access to evaluating your location triggers.
 
 ![GeoCuts Helper creates new location triggers from the iOS Share sheet.](https://adamtow.github.io/geocuts/images/geocuts-helper.png)
@@ -334,6 +336,20 @@ Displays additional information about a location trigger in the description area
 
 ![Description labels for each location trigger.](https://adamtow.github.io/geocuts/images/geocuts-description-labels.png)
 
+#### Use Quick Edit Menu
+By default, tapping on a location trigger from the GeoCuts Home screen will open the selected location trigged in the Edit Location Trigger screen. Enabling the **Use Quick Edit Menu** option will present a menu with commonly used actions:
+
+- **Enable/Disable**: Global ON/OFF switch for this location trigger.
+- **Edit**: Opens the Edit Location Trigger window.
+- **View in Maps/Google Maps/Waze**: Open the location in the location trigger using your default mapping application.
+- **Delete**: Delete the selected location trigger.
+- **Clear Last Run Date**: Clearing the Last Run Date is useful if you are testing your location trigger and have set a Repeat Interval time (i.e. run after 5 minutes or after 10 hours).
+
+### Defaults
+
+- **Use Miles**: GeoCuts can calculate trigger radiuses in either miles or kilometers. Changing from one to another will cause GeoCuts to prompt you if you want to re-calculate the existing trigger radius values.
+- **Set Default Mapping App**: Choose between Apple Maps, Google Maps, or Waze. For the last two, you must have those apps installed.
+- **Edit Default Location Trigger**: You can edit the default template for location triggers. Suppose you want all of your entries to run during the weekdays from 9-12 pm. Instead of modifying each location trigger as you add them, you can update the default template.
 
 <span id="current-location"></span>
 ### Current Location
@@ -342,44 +358,22 @@ There are two methods for retrieving the current location.
 - **Get Current Location**: This method is accurate but takes longer to retrieve your location. Use it if you absolutely need to know where you are. 
 - **Get Current Weather**: This method is faster but is not as accurate. iOS does not update your weather location as frequently as Get Current Location. 
 
-<span id="open-maps-after-running"></span> 
-### Open Maps After Running
-If you are actively using a mapping application for directions, enable this setting from the GeoCuts Home screen. After evaluating your location triggers, GeoCuts will return to your default mapping application: Apple Maps, Google Maps, or Waze. 
-
-#### Use Quick Edit Menu
-By default, tapping on a location trigger from the GeoCuts home screen will open the Location Trigger Edit screen. Enable **Use Quick Edit Menu** to raise a menu with quick actions related to the selected location trigger. 
-
-### General
-
-- Show Description Labels
-- Use Location Trigger Assistant
-- Use Quick Menu
-
-### Defaults
-
-- Set Default Mapping App
-- Edit Default Location Trigger
-
-### Current Location
-
-- Use Get Current Weather
-- Get Current Location at Startup
-
 ### Lock Detection
 - Enable Lock Detection
-- Audibly Ask to Unlock Device
+- Audibly Ask to Unlock Your Device
+- Set Unlock Prompt Volume
 - Custom Unlock Prompt
 
 ### Advanced
-
-- Enable Logs
-- Enable Location Log
-- Debug
+- Log Level
+- Switch to Shortcuts Immediately
+- Enable Debug Mode
 
 ### Tools
 
 - Install Share Sheet Helper
 - View Logs
+- Export Location Triggers
 - Check For Updates
 - Change Language
 - Reset
