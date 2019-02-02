@@ -17,6 +17,11 @@ Each location trigger has its own schedule — hours of operation and active day
 
 You can also create new GeoCuts location triggers directly from the iOS Share sheet using the GeoCuts Helper shortcut. 
 
+## Features
+
+
+
+
 ## Background
 GeoCuts addresses the problem of  automatically running shortcuts based on your location. While there are a number of great apps that let you create location triggers -- Find My Friends, Reminders, IFTTT, and Launch Center Pro -- none of them can run a shortcut without you having to tap on a notification banner. 
 
@@ -150,7 +155,7 @@ Location triggers consist of the following components:
 
 - **Enabled**: The on/off switch for the location trigger. 
 - **Name**: The name of the location trigger. 
-- **Tags**: Keywords for the location trigger. You can filter which triggers appear on the GeoCuts Home screen. 
+- **Tags**: Keywords for the location trigger. You can filter which triggers appear and run on the GeoCuts Home screen. 
 - **Location**: The location where the trigger is centered on. 
 - **Trigger Radius**: The maximum distance from the location for the trigger to occur. The distance unit of miles or kilometers is specified from the Customize Shortcut… page. 
 - **Active Timeframe**: The times during the day when this location trigger is active. 
@@ -180,6 +185,7 @@ When you open to the GeoCuts Home screen, you're presented with the following se
 - **Run Continously Via Cronios**: Launches Cronios in "Run Continuously" mode. If you've added the GeoCuts cron job to Cronios, it will automatically run on the schedule that you have assigned. [Learn more about Cronios and Geocuts here](#cronios).
 - **Run Once**: Evaluates your location triggers based on your current location. Returns to the GeoCuts Home screen when done.
 - **Open Maps After Running**: If you are actively using a mapping application like Maps, Google Maps, or Wave, you can enable this setting to return to the designated app after evaluating your location triggers. Learn more about this feature in the [Open Maps After Running](#open-maps-after-running) section.
+- **Run Only Filtered Location Triggers**: If Enabled, only location triggers matching your current filter will be evaluated and run. 
 - **Get Current Location**: Retrieves your current location using either the [Get Current Weather or Get Current Location action](#current-location).
 - **Show Current/Last Location**: Displays either your current location or your last location in your default mapping application.
 - **New Location Trigger**: Creates a new location trigger. Opens to the Location Trigger Assistant if that preferences has been set, the location trigger edit screen if not. [Learn more about creating location triggers](#creating-location-triggers).
@@ -229,15 +235,8 @@ By using one of these two methods, you can quickly add multiple location trigger
 - Remembering the locations where you took your favorite photos or experienced your most rewarding memories.
 - Creating zones where certain tasks have to occur. 
 
-<span id="settings"></span> 
-## Settings
-GeoCuts is highly configurable. From the Settings page (access from the bottom of the Home screen), you can adjust the following options in GeoCuts.
 
-<span id="current-location"></span>
-### Current Location
 
-<span id="open-maps-after-running"></span> 
-### Open Maps After Running
 
 <span id="cronios"></span>
 ## Cronios and GeoCuts
@@ -285,8 +284,25 @@ Tapping on GeoCuts Helper from the Shortcuts screen will cause GeoCuts to evalua
 
 ***
 
+<span id="settings"></span> 
 ## Settings
-GeoCuts features many settings to customize its operation to your personal preferences. 
+GeoCuts is highly configurable. From the Settings page (access from the bottom of the Home screen), you can adjust the following options in GeoCuts.
+
+### General
+
+<span id="current-location"></span>
+### Current Location
+There are two methods for retrieving the current location. 
+
+- **Get Current Location**: This method is accurate but takes longer to retrieve your location. Use it if you absolutely need to know where you are. 
+- **Get Current Weather**: This method is faster but is not as accurate. iOS does not update your weather location as frequently as Get Current Location. 
+
+<span id="open-maps-after-running"></span> 
+### Open Maps After Running
+If you are actively using a mapping application for directions, enable this setting from the GeoCuts Home screen. After evaluating your location triggers, GeoCuts will return to your default mapping application: Apple Maps, Google Maps, or Waze. 
+
+#### Use Quick Edit Menu
+By default, tapping on a location trigger from the GeoCuts home screen will open the Location Trigger Edit screen. Enable **Use Quick Edit Menu** to raise a menu with quick actions related to the selected location trigger. 
 
 ### General
 
