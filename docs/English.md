@@ -355,30 +355,61 @@ By default, tapping on a location trigger from the GeoCuts Home screen will open
 
 <span id="current-location"></span>
 ### Current Location
+
+#### Use Get Current Weather
 There are two methods for retrieving the current location. 
 
 - **Get Current Location**: This method is accurate but takes longer to retrieve your location. Use it if you absolutely need to know where you are. 
 - **Get Current Weather**: This method is faster but is not as accurate. iOS does not update your weather location as frequently as Get Current Location. 
 
+#### Get Current Location at Startup
+You can configure GeoCuts to retrieve the current location when it opens to the GeoCuts Home screen. Doing so will allow you to immediately see which location triggers are in range.
+
+When getting the current location, you may experience the following error conditions:
+
+1. GPS location cannot be retrieved.
+2. Network is offline.
+3. One of you location triggers has an invalid location.
+
+Because Shortcuts does not provide much in the way of error checking, this error will terminate GeoCuts (and Cronios, if it was running in the background). GeoCuts will not run in automatic evaluation mode until you clear the error, which you can do simply by opening the application to the GeoCuts Home screen.
+
+If the error was a result of an invalid location, you must correct the location trigger before you can continue evaluation.
+
 ### Lock Detection
-- Enable Lock Detection
-- Audibly Ask to Unlock Your Device
-- Set Unlock Prompt Volume
-- Custom Unlock Prompt
+When running automatically via Cronios, GeoCuts can detect when it is running but your device is locked. It does so by checking the device brightness. If it's 0, GeoCuts considers the device locked. GeoCuts can display an audible notification banner or speak to you. 
+
+It will then wait 10 seconds before evaluating the brightness value again. If the brightness value is above 0, it considers the device unlocked and continues evaluating your location triggers. If the device brightness remains 0, GeoCuts does not do any evaluation and returns control back to Cronios.
+
+- **Enable Lock Detection**: The ON/OFF toggle for Lock Detection. If you disable Lock Detection, GeoCuts will not run when it thinks your device is locked.
+- **Audibly Ask to Unlock Your Device**: Prompts you with the Siri voice to ask you to unlock your device.
+- **Set Unlock Prompt Volume**: You can set the volume of the unlock prompt or use the current system volume (set the value to 0).
+- **Custom Unlock Prompt**: You can customize the unlock prompt the iOS device speaks to you. If you set a custom Siri Voice and Language, you'll want to set a customized unlock prompt in your language.
+
+#### Limitations
+Lock Detection is not perfect and has the following limitations: 
+
+1. If your device is locked but the screen is on, lock detection will not work. GeoCuts will try to get the current location, but it will fail and crash GeoCuts and Cronios. You will have to restart Cronios and GeoCuts to resume location trigger evaluation.
+2. If you manually set your device brightness to 0, GeoCuts will consider the device locked.
 
 ### Advanced
-- Log Level
-- Switch to Shortcuts Immediately
-- Enable Debug Mode
+
+- **Log Level**: GeoCuts can be configured to write to a log file to iCloud Drive. Select from one of four logging levels:
+	1. No Logging
+	2. Basic Logging: Only run activity will be recorded.
+	3. Extended Logging: GeoCuts will write to a location log of all the places it has checked your location triggers.
+	4. Developer Logging: Additional information is recorded about each location trigger and they are evaluated and run by GeoCuts.
+- **Switch to Shortcuts Immediately**: In order to check your current location, GeoCuts must switch back to the Shortcuts app. This context shift can be jarring, so by default, a notification banner appears and GeoCuts waits 2 seconds before switching applications. Enable this preference to immediately switch to the Shortcuts app.
+- **Enable Debug Mode**: Displays additional information when running GeoCuts, including the next function call being made and how long the application has stayed in the current loop iteration.
 
 ### Tools
 
-- Install Share Sheet Helper
-- View Logs
-- Export Location Triggers
-- Check For Updates
-- Change Language
-- Reset
+- **Install GeoCuts Helper Shortcut**: Installs the shortcut that can be used from the iOS Share sheet to create new location triggers.
+- **View Logs**: Displays and run and location logs for the current device.
+- **Export Location Triggers**: Exports all of your location triggers into a GeoCuts Export Dictionary object. You can take this and import it into another iOS device running GeoCuts.
+- **Import Location Triggers**: Import location triggers into GeoCuts. The input must be a valid GeoCuts Export Dictionary object.
+- **Check For Updates**: Checks for updates to GeoCuts on GitHub.
+- **Change Language**: Change to a different language.
+- **Reset**: Reset GeoCuts back to factory settings, erase all content and settings from GeoCuts, or clear the Shortcuts icon cache.i
 
 <span id="developers"></span>
 ## Developers
@@ -398,3 +429,6 @@ With the information in the GeoCuts dictionary, you can perform many custom acti
 
 <span id="localization"></span> 
 ## Localization
+GeoCuts comes pre-installed for the English language, but the app is fully localized and ready to be translated into different languages. If you would like to help translate GeoCuts, submit a pull request based off of the [English.json localization template](https://github.com/adamtow/geocuts/blob/master/localization/English.json) on GitHub.
+
+GeoCuts is a complicated shortcut application, and there are a lot of strings to translate. 
