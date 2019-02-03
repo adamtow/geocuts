@@ -157,7 +157,7 @@
 	    "menu.main.bulkEditAll": "Bulk Edit All…",
 	    "menu.main.cronios": "Cronios",
 	    "menu.main.cronios.import": "Add GeoCuts Cron Job to Cronios…",
-	    "menu.main.cronios.update": "Update GeoCuts Cron Job in Cronios…",
+	    "menu.main.cronios.update": "Update GeoCuts in Cronios…",
 	    "menu.main.cronios.run": "Run Continously Via Cronios…",
 	    "menu.main.cronios.run.description": "Launches Cronios in `Run Continuously` mode",
 	    "menu.main.currentLocation": "Get Current Location…",
