@@ -420,10 +420,12 @@ GeoCuts sends a special GeoCuts dictionary to all shortcuts that it calls from a
 - **Location**: The current location.
 - **Exit**: A boolean value of true means the shortcut is an exit trigger.
 - **Trigger Radius**: The maximum distance from the location that the device could be in.
+- **Input**: Optional input sent to the shortcut. 
+- **Online**: A boolean value denoting your current network status. True means online and false means offline.
 - **Last Run**: The date the location trigger last ran.
+- **Distance**: The distance calculated from your current location and the trigger location.
 - **Distance Unit**: The user's distance unit, Miles or Kilometers.
 - **Distance Unit String**: The distance unit as a localized string.
-- **Online**: Whether the iOS device is online and connected to the internet.
 
 With the information in the GeoCuts dictionary, you can perform many custom actions. 
 
