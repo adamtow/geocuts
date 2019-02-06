@@ -297,7 +297,7 @@
 	    "prompt.donate": "Enjoing GeoCuts? I'd appreciate a tip!",
 	    "prompt.erase.content": "Are you sure you want to delete all GeoCuts content and settings for this device?\n\nThis operation cannot be undone. ",
 	    "prompt.erase.content2": "Are you ABSOLUTELY SURE you want to delete all GeoCuts content and settings for this device?\n\nThis operation cannot be undone.",
-	    "prompt.frequency": "Add/Update GeoCuts Cron Job in Cronios\n\nHow often do you want the GeoCuts cron job to run in Cronios? Check times begin from the top of the hour.",
+	    "prompt.frequency": "Add/Update GeoCuts Cron Job in Cronios\n\nHow often do you want the GeoCuts cron job to run in Cronios? Check times begin from the top of the minute.",
 	    "prompt.import": "Paste in a GeoCuts Location Trigger dictionary to import into GeoCuts. Only new location triggers with new IDs will be imported. Existing location triggers will not be replaced.",
 	    "prompt.import.command": "Do you want to assign the default command to all imported location triggers or choose a new command for all?",
 	    "prompt.import.locations": "Choose a location to import.",
