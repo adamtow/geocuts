@@ -3,6 +3,8 @@ GeoCuts runs shortcuts or sends messages using your current location. When paire
 
 > [**Download the latest version of GeoCuts**](https://routineHub.co/shortcut/1732)
 
+![GeoCuts Home](https://adamtow.github.io/geocuts/images/geocuts-home.png)
+
 <span id="overview"></span>
 ## Overview
 As Cronios introduced a new method for automatically running your shortcuts based on time, GeoCuts does the same for location — still with no tapping on notifications banners required.
@@ -15,6 +17,8 @@ Here are a few ideas on what you can do automatically with GeoCuts:
 - **Leaving Work**: An exit trigger that runs between 5-7 p.m. on the weekdays when you leave your work zone. 
 - **Location DND**: A trigger that sets Do Not Disturb mode on whenever you are at your favorite movie theater or restaurant. 
 - **Running Music**: A series of location triggers that play your favorite songs or inform you or your friends and family at key points along your running path.  
+
+![GeoCuts Apple Visitor Center](https://adamtow.github.io/geocuts/images/geocuts-apple-visitor-center.png)
 
 ## Table of Contents
 
