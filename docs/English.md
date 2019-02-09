@@ -130,41 +130,16 @@ Once GeoCuts is open, follow these steps:
 1. Tap **New Location Trigger** to open the **Location Trigger Assistant**. 
 2. Enter the location where you want the trigger to occur. You can specify a street address or Latitude and Longitude. For now, enter the special string `{{Current Location}}` to create a location trigger that always runs wherever you are.
 3. Choose whether your trigger runs by **arriving** at or **leaving** the location. 
-4. Enter the **maximum distance** (in miles or kilometers) from the location where the trigger will occur. \
-\
-![Create Location Trigger #1](https://adamtow.github.io/geocuts/images/create-location-trigger-1.png)
-\
-\
-\
-
+4. Enter the **maximum distance** (in miles or kilometers) from the location where the trigger will occur. ![Create Location Trigger #1](https://adamtow.github.io/geocuts/images/create-location-trigger-1.png)
 5. Choose whether you want to send a **text message** or **run a shortcut**. 
 6. If you chose message, you can send to up to five recipients. 
-7. If you chose shortcut, be sure to select a [background-aware shortcut](#background-aware-shortcuts). You can also optionally add input to your shortcut. \
-\
-![Create Location Trigger #2](https://adamtow.github.io/geocuts/images/create-location-trigger-2.png)
-\
-\
-\
-
+7. If you chose shortcut, be sure to select a [background-aware shortcut](#background-aware-shortcuts). You can also optionally add input to your shortcut. ![Create Location Trigger #2](https://adamtow.github.io/geocuts/images/create-location-trigger-2.png)
 8. Set **active times** and **active days** for your location trigger. You can for instance, set up a trigger to only run from 8 a.m. to 10:00 a.m. on Monday through Friday. 
 9. Set the **repeat interval**, or how long the location trigger must wait after running to run again. 
-10. Enter some optional **tags** for the location trigger. You can filter which location triggers appear and run on the GeoCuts Home screen.\
-\
-\
-![Create Location Trigger #3](https://adamtow.github.io/geocuts/images/create-location-trigger-3.png)
-\
-\
-\
-
+10. Enter some optional **tags** for the location trigger. You can filter which location triggers appear and run on the GeoCuts Home screen. ![Create Location Trigger #3](https://adamtow.github.io/geocuts/images/create-location-trigger-3.png)
 11. Enter a **name** for your new location trigger. 
 12. Choose to add a **location-reminder** in the Reminders app to run the [GeoCuts Helper shortcut](#geocuts-helper). 
-13. Tap **Home**. \
-\
-![Create Location Trigger #4](https://adamtow.github.io/geocuts/images/create-location-trigger-4.png)\
-\
-\
-\
-
+13. Tap **Home**. ![Create Location Trigger #4](https://adamtow.github.io/geocuts/images/create-location-trigger-4.png)
 14. Tap **Run**. 
 15. Tap **Run Once**.
 
@@ -310,62 +285,30 @@ When you tap on a location trigger from the GeoCuts Home screen, you'll be direc
 - **Trigger Radius**: The maximum distance from the location for the trigger to occur. The distance unit of miles or kilometers is specified in [Settings](#settings).
 - **Trigger on Exit**: Enable this if you want the location trigger to run after you enter **and** exit the location.
 - **Map Options**: A menu containing the following options:
-	- **Open in {{Default Mapping App}}**: Opens the default mapping app to the location trigger's location.\
-\
-![Open in Maps](https://adamtow.github.io/geocuts/images/open-in-maps.png)\
-\
-\
-
+	- **Open in {{Default Mapping App}}**: Opens the default mapping app to the location trigger's location. ![Open in Maps](https://adamtow.github.io/geocuts/images/open-in-maps.png)
 	- **Get Directions Using {{Default Mapping App}}**: Gets directions using the default mapping app to the location trigger's location.
 	- **Get Maps URL**: Get an Apple Maps URL to the location trigger's location.
 	- **Set Default Mapping App**: Choose between Apple Maps, Google Maps, and Waze as your default mapping application.
 - **Command**: The action performed when there is a location match. You can send a text message or run a [background-aware shortcut](#shortcuts). 
     - **Send a Text Message**
         - **Message**: the contents of the SMS or iMessage that will be sent when the Message command has been selected. 
-        - **Recipient**: the recipient(s) of the text message when the Message command has been selected. You can specify up to 5 recipients.\
-\
-![Send a Text Message](https://adamtow.github.io/geocuts/images/send-message.png)
-\
-\
-\
-
+        - **Recipient**: the recipient(s) of the text message when the Message command has been selected. You can specify up to 5 recipients. ![Send a Text Message](https://adamtow.github.io/geocuts/images/send-message.png)
     - **Run a Shortcut**
         - **Shortcut**: the shortcut to run when the location trigger is successfully matched with the device’s current location. 
         - **Optional Input**: optional text input to provide to the shortcut. The input is contained with the [GeoCuts Dictionary](#developer) under the `Input` key. 
 - **Schedule**: Configure when the location trigger is active and how frequently it can run.
-	- **Active Timeframe**: The times during the day when this location trigger is active. \
-\
-![Active Timeframe](https://adamtow.github.io/geocuts/images/active-hours.png)
-\
-\
-\
-
-	- **Active Days**: The days of the week on which the location trigger will work. NOTE: If you deselect all days, every day will be selected again.\
-\
-![Active Days](https://adamtow.github.io/geocuts/images/day-schedule.png)
-\
-\
-\
-
+	- **Active Timeframe**: The times during the day when this location trigger is active. ![Active Timeframe](https://adamtow.github.io/geocuts/images/active-hours.png)
+	- **Active Days**: The days of the week on which the location trigger will work. NOTE: If you deselect all days, every day will be selected again.![Active Days](https://adamtow.github.io/geocuts/images/day-schedule.png)
 	- **Repeat Interval**: How long the location trigger must wait before being able to be triggered again at the same location. You can specify:
 		- **Run Once**: Once the location trigger runs, it turns itself off. Use this for one time events. 
-		- **Minutes**: The number of minutes you must wait before the location trigger becomes active again. \
-\
-![Repeat Interval using minutes](https://adamtow.github.io/geocuts/images/repeat-interval.png)
-\
-\
-\
-
+		- **Minutes**: The number of minutes you must wait before the location trigger becomes active again. ![Repeat Interval using minutes](https://adamtow.github.io/geocuts/images/repeat-interval.png)
 		- **Hours**: The number of hours you must wait before the location trigger becomes active again. 
 		- **Days**: The number of calendar days you must wait before the location trigger becomes active again. 
 		- **No Delay**: Repeat the command as often as GeoCuts is called by Cronios. 
 - **Display Notification When Run**: Displays a banner notification when the location trigger’s command is run. Specify false to suppress the notification. 
-- **Add to Reminders**: Adds a location-reminder to run GeoCuts in your Reminders app. This is useful if you don't plan to run Cronios all the time or if you want an extra reminder that you have a location trigger ready to run when you enter a location.\
-\
+- **Add to Reminders**: Adds a location-reminder to run GeoCuts in your Reminders app. This is useful if you don't plan to run Cronios all the time or if you want an extra reminder that you have a location trigger ready to run when you enter a location.
+
 ![Location Reminder](https://adamtow.github.io/geocuts/images/location-reminder.png)
-\
-\
-\
 
 - **Export**: Exports the current location trigger. You can copy and paste the text displayed in the Quick Look window and import it on another iOS device running GeoCuts.
 - **Delete**: Deletes the current location trigger. You will be prompted to delete any location-reminders in the Reminders app as well.
@@ -379,22 +322,10 @@ Take GeoCuts to the next level by pairing it with [Cronios, the shortcuts schedu
 
 To add the GeoCuts cron job to Cronios, perform the following steps:
 
-1. From the GeoCuts Home screen, tap **Next Steps**.\
-\
-![GeoCuts Cron Job #1](https://adamtow.github.io/geocuts/images/cronios-cronjob-1.png)\
-\
-\
-\
-
+1. From the GeoCuts Home screen, tap **Next Steps**. ![GeoCuts Cron Job #1](https://adamtow.github.io/geocuts/images/cronios-cronjob-1.png)
 2. Tap **Add GeoCuts Cron Job to Cronios**.
 3. Choose a check frequency. See section below to determine a value appropriate for your needs.
-4. Read the information about importing and enabling the cron job.\
-\
-![GeoCuts Cron Job #2](https://adamtow.github.io/geocuts/images/cronios-cronjob-2.png)\
-\
-\
-\
-
+4. Read the information about importing and enabling the cron job. ![GeoCuts Cron Job #2](https://adamtow.github.io/geocuts/images/cronios-cronjob-2.png)
 5. Cronios will now open to the its Import dialog box. Make sure the GeoCuts cron job is selected and tap **Done**.
 6. If you already have the GeoCuts cron job installed, Cronios will ask you to replace the existing cron job or keep both. It's recommend to replace the existing one, so you only have one GeoCuts cron job operating at one time.
 7. After importing the cron job, you can return to GeoCuts or go to the Cronios Home screen.
