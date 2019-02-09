@@ -1,15 +1,15 @@
 # GeoCuts
-GeoCuts runs shortcuts or sends messages using your current location. When paired with Cronios (cronios.com) — the shortcuts scheduler for iOS — GeoCuts does this all automatically as you move about during the day.
+GeoCuts runs shortcuts or sends messages using your current location. When paired with [Cronios — the shortcuts scheduler for iOS](http://cronios.com) — GeoCuts does this all **automatically** as you move about during the day.
 
-> [**Download the latest version of GeoCuts**](https://routineHub.co/shortcut/1732)
+> [**Download GeoCuts from RoutineHub &raquo;**](https://routineHub.co/shortcut/1732)
 
 ![GeoCuts Home](https://adamtow.github.io/geocuts/images/geocuts-home.png)
 
 <span id="overview"></span>
 ## Overview
-As Cronios introduced a new method for automatically running your shortcuts based on time, GeoCuts does the same for location — still with no tapping on notifications banners required.
+As Cronios introduced a method for automatically running your shortcuts based on time, GeoCuts does the same for location — still with no tapping on notifications banners required.
 
-Each location trigger you create has its own schedule — hours of operation and active days in the week — and you can configure how often a trigger can run again after being triggered. You can also create multiple triggers directly from the iOS Share sheet using the [GeoCuts Helper shortcut](#helper). 
+Each location trigger you create has its own schedule — hours of operation and active days in the week — and you can configure how often it can run again after being triggered. You can also create multiple triggers directly from the iOS Share sheet using the [GeoCuts Helper shortcut](#helper). 
 
 Here are a few ideas on what you can do automatically with GeoCuts:
 
@@ -19,6 +19,8 @@ Here are a few ideas on what you can do automatically with GeoCuts:
 - **Running Music**: A series of location triggers that play your favorite songs or inform you or your friends and family at key points along your running path.  
 
 ![GeoCuts Apple Visitor Center](https://adamtow.github.io/geocuts/images/geocuts-apple-visitor-center.png)
+
+If you prefer not to run GeoCuts automatically with Cronios, you can also set location-based reminders in the Reminders app. Tapping on the notification banner will immediately run GeoCuts and evaluate all of your location triggers.  
 
 ## Table of Contents
 
@@ -87,7 +89,7 @@ The following permissions need to be granted to the Shortcuts app:
 ## Download and Installation
 Download the latest version from RoutineHub.co:
 
-- [**Download GeoCuts from RoutineHub.co**](https://routinehub.co/shortcut/1732)
+- [**Download GeoCuts from RoutineHub**](https://routinehub.co/shortcut/1732)
 
 When you first install GeoCuts, there will be two setup phases to complete:
 
@@ -105,16 +107,16 @@ First, the Customize Shortcut screen will appear and ask you the following quest
 > NOTE: It may take a few seconds for Shortcuts to record your changes after tapping Done from the Customize Shortcuts and Shortcut Settings screens due to the large size of GeoCuts (almost 5,000 actions).
 
 ### GeoCuts Setup
-Next, GeoCuts will ask you a series of setup questions. You can change all of these settings later in GeoCuts Settings. 
+Next, GeoCuts will ask you a series of setup questions. You can change all of these later in GeoCuts Settings. 
 
 - **Language**: GeoCuts comes pre-installed for English, but it is fully localized and ready to be translated in your language. [Read the section on localization for more details.](#localization) 
 - **Distance Unit**: Choose between Kilometers or Miles when entering Trigger Radius values. If you have reset GeoCuts, you'll be given the opportunity to convert the trigger radius values of your existing location triggers from one distance unit to the other.
-- **Current Location Method**: GeoCuts uses one of two methods for retrieving your current location. Get Current Weather is fast but less accurate than the slower but more precise Get Current Location.
+- **Current Location Method**: GeoCuts uses one of two methods for retrieving your current location. Get Current Weather is fast, but it is less accurate than the slower but more precise Get Current Location.
 - **Default Mapping App**: GeoCuts works with [Apple Maps, Google Maps, and Waze](#default-mapping-app). Make sure you have the last two installed if you want to use them. Otherwise, GeoCuts will give an error when trying to open them. 
 - **Lock Detection**: When [running in the background via Cronios](#cronios), GeoCuts can [detect when the screen is off](#lock-detection). GeoCuts can then prompt you to unlock the device in order to evaluate your location triggers. You can also customize the unlock prompt if you changed your Siri Voice and Language in the Customize Shortcut portion of setup.  
-- **Logging**: Choose the [level of logging](#logging) you would like GeoCuts to perform. Basic provides just information on the shortcuts that have run via GeoCuts. Extended (recommended) records all the locations that GeoCuts has been run from. Developer provides detailed information to help you develop and debug your location triggers. 
+- **Logging**: Choose the [level of logging](#logging) you would like GeoCuts to perform. Basic provides just information on the shortcuts that have run via GeoCuts. Extended (recommended) records all the locations that GeoCuts has been run from. Developer provides detailed information to help you develop and debug your location triggers. You can view the logs from GeoCuts settings.  
 - **GeoCuts Helper**; Information on the [GeoCuts Helper shortcut](#helper) will be shown. Use this shortcut from the iOS Home screen to immediately evaluate your location triggers or from iOS Share Sheet to add new location triggers to GeoCuts. 
-- **Cronios**: Information on how to use GeoCuts with Cronios to automatically run shortcuts or send text messages based on your location will be shown next.  
+- **Cronios**: Information on how to use GeoCuts with Cronios to run shortcuts or send text messages automatically based on your location will be shown next.  
 - **Setup Complete**: Create a new location trigger, add the GeoCuts cron job to Cronios, read the documentation, or go to the GeoCuts Home. 
 
 ***
@@ -123,7 +125,7 @@ Next, GeoCuts will ask you a series of setup questions. You can change all of th
 ## Creating Your First Location Trigger
 Let’s create your first location trigger.
 
->First be sure you run GeoCuts from the Shortcuts Home screen. With nearly 5,000 action steps, running it from the Shortcuts edit screen will be very slow.
+> ⚠️ First be sure you run GeoCuts from the Shortcuts Home screen. With nearly 5,000 action steps, running it from the Shortcuts edit screen will be very slow.
 
 Once GeoCuts is open, follow these steps:
 
@@ -131,7 +133,7 @@ Once GeoCuts is open, follow these steps:
 2. Enter the location where you want the trigger to occur. You can specify a street address or Latitude and Longitude. For now, enter the special string `{{Current Location}}` to create a location trigger that always runs wherever you are.
 3. Choose whether your trigger runs by **arriving** at or **leaving** the location. 
 4. Enter the **maximum distance** (in miles or kilometers) from the location where the trigger will occur. ![Create Location Trigger #1](https://adamtow.github.io/geocuts/images/create-location-trigger-1.png)
-5. Choose whether you want to send a **text message** or **run a shortcut**. 
+5. Choose whether you want to send a **text message** or **run a shortcut**.
 6. If you chose message, you can send to up to five recipients. 
 7. If you chose shortcut, be sure to select a [background-aware shortcut](#background-aware-shortcuts). You can also optionally add input to your shortcut. ![Create Location Trigger #2](https://adamtow.github.io/geocuts/images/create-location-trigger-2.png)
 8. Set **active times** and **active days** for your location trigger. You can for instance, set up a trigger to only run from 8 a.m. to 10:00 a.m. on Monday through Friday. 
@@ -158,14 +160,14 @@ By itself, GeoCuts is a great tool for organizing all of your location-based sho
 ## How It Works
 When run by Cronios or manually GeoCuts takes the following steps:
 
-1. Checks the global ON/OFF switch. If OFF, it exits. If ON, it continues to Step 2. 
+1. Checks the global ON/OFF switch. If OFF, it exits. If ON, GeoCuts continues to Step 2. 
 2. Checks if the device is locked using the [Lock Detection technique from Cronios](http://cronios.com#lock-detection). If the device appears locked and Lock Detection is enabled in Settings, an audible prompt or banner notification with sound appears is presented to the user to unlock the device. If the device still appears to be locked after 10 seconds, exit. Otherwise, continue to Step 3. 
 3. Notifies the user that an app switch is about to occur.
 4. Switches to the Shortcuts app. To retrieve the current location and send messages, Shortcuts must be the frontmost application. 
-5. Retrieves the current location of the device. This may take several seconds if you are using Get Current Location instead of Get Current Weather. 
+5. Retrieves the current location of the device. This may take several seconds if you chose to use Get Current Location instead of Get Current Weather. 
 6. Iterates through all active and filtered location triggers and determines whether the current location lies within the radius of each trigger.
 7. For each match, run the command assigned to the trigger: run a shortcut or send a text message. 
-8. Exits and returns control back to Cronios or the user. 
+8. Exits and returns control back to Cronios and the user. 
 
 ***
 
@@ -178,12 +180,12 @@ When you open to the GeoCuts Home screen, you're presented with the following se
 ### Next Steps
 These actions appear after you installed GeoCuts or if you have reset your settings.
 
-- **Install GeoCuts Helper**: Adds the Helper shortcut to Shortcuts. This option disappears when you have run the command (you can find it again in Settings). 
+- **Install GeoCuts Helper**: Adds the Helper shortcut to Shortcuts.
 - **Add GeoCuts Cron Job to Cronios**: Opens Cronios and adds a cron job for GeoCuts at a check frequency of your choosing. This option moves to the bottom of the Home screen when you first run it. Updating an existing GeoCuts cron job requires Cronios 1.2 or higher.
 
 ### ON/OFF and Current Location
 
-- **Enable/Disable Monitoring**: A global ON/OFF switch for GeoCuts. If disabled, you will not be able to monitor your location triggers from Cronios or the GeoCuts Helper shortcut.
+- **Enable/Disable Monitoring**: The global ON/OFF switch for GeoCuts. If disabled, you will not be able to monitor your location triggers from Cronios or the GeoCuts Helper shortcut.
 - **Get Current Location**: Retrieves your current location using either the [Get Current Location or Get Current Weather action](#current-location).
 - **Show Current/Last Location**: Displays either your current location or your last location in your default mapping application.
 
@@ -191,7 +193,7 @@ These actions appear after you installed GeoCuts or if you have reset your setti
 
 - **Use Get Current Weather**: Enable this to use the faster but less accurate method for retrieving your current location. Disable this to use the Get Current Location Action, which is slower but more accurate. 
 - **Run Only Filtered Location Triggers**: If Enabled, only location triggers matching your current tag filter will be evaluated and run. [Learn more here about tags here](#tags).
-- **Open Maps After Running**: If you are actively using a mapping application like Maps, Google Maps, or Wave for turn-by-turn directions, you can enable this setting to return to the app after evaluating your location triggers. Learn more about this feature in the [Open Maps After Running](#open-maps-after-running) section.
+- **Open Maps After Running**: If you are actively using a mapping application like Maps, Google Maps, or Waze for turn-by-turn directions, you can enable this setting to return to the app after evaluating your location triggers. Learn more about this feature in the [Open Maps After Running](#open-maps-after-running) section.
 
 ### Run Controls
 
@@ -203,17 +205,17 @@ These actions appear after you installed GeoCuts or if you have reset your setti
 - **New Location Trigger**: Creates a new location trigger. Opens to the Location Trigger Assistant if that preferences has been set, the location trigger edit screen if not. [Learn more about creating location triggers](#creating-location-triggers).
 - **Filter**: Choose which location triggers appear in the Home list by filtering based on tags. Depending on the **Run Only Filtered Location Triggers** settings, all location triggers or only those visible will be evaluated when GeoCuts runs.
 - **List of Your Location Triggers**: This section lists all of your location triggers, filtered by tag and sorted by enabled status and name. [This section details the information](#location-triggers-information) you see in each location trigger row.
-- **Bulk Edit**: Allows you to choose and edit multiple location triggers from your list.
+- **Bulk Edit**: Allows you to choose and edit multiple location triggers.
 - **Bulk Edit All**: Performs an operation on all of your location triggers.
 - **Import Location Triggers**: Import a list of location triggers into GeoCuts. 
-- **Update GeoCuts in Cronios**: Once you've added the GeoCuts Cron Job to Cronios, this menu item will appear. It allows you to re-export the cron job back to Cronios and replace the existing cron job with the new one.
+- **Update GeoCuts in Cronios**: Once you've added the GeoCuts Cron Job to Cronios, this menu item will appear. It allows you to update the existing cron job in Cronios with a new one.
 
 ### GeoCuts
 
 - **About**: Displays the GeoCuts about screen, which contains version and build number information.
-- **Help**: Displays the GeoCuts Help documentation on GitHub. Requires internet access to retrieve documentation.
 - **Tip Jar**: Like GeoCuts? I'd appreciate a tip or donation!
-- **Settings**: Opens to the [GeoCuts Settings page](#settings).
+- **Help**: Displays the GeoCuts Help documentation on GitHub. Requires internet access to retrieve documentation.
+- **Settings**: Opens the [GeoCuts Settings page](#settings).
 
 ***
 
@@ -222,17 +224,17 @@ By default, each location trigger shows the following information:
 
 - **Name**: The name of the location trigger.
 - 🎯 - The location trigger is in range. It will be evaluated if you run GeoCuts. This icon appears if you have retrieved the Current Location in the app.
-- ⬅️ - Denotes an exit location trigger. The location trigger will run after detecting you have entered the specified location.
+- ⬅️ - Denotes an exit location trigger. The location trigger will run after detecting you have entered and left the specified location.
 - **Location**: The location where the entrance or exit trigger will occur.
 
 ![Minimal description labels next to each location trigger.](https://adamtow.github.io/geocuts/images/geocuts-description-labels.png)
 
 Enabling **Show Description Labels** option in [Settings](#settings) will display additional icons next to your location trigger's location.
 
-- ▶️ - The location trigger will run a shortcut.
-- 💬 - The location trigger will send a text message.
-- ♾ - The location trigger will run every time Cronios successfully evaluates GeoCuts.
-- 📆 - The repeat interval for the location trigger has been sent for (calendar) days.
+- ▶️ - The location trigger is configured to run a shortcut.
+- 💬 - The location trigger is configured to send a text message.
+- ♾ - The location trigger will run every time.
+- 📆 - The repeat interval for the location trigger has been sent to run every X (calendar) days.
 - 1️⃣ - The location trigger has been set up to run once before disabling itself.
 - ⏰ - The location trigger has been set up to run every X hours.
 - ⏲ - The location trigger has been set up to run every X minutes.
@@ -247,7 +249,7 @@ Enabling **Show Description Labels** option in [Settings](#settings) will displa
 ## Creating Location Triggers
 We have already seen how the [Location Trigger Assistant](#assistant) guides you in creating a new Location Trigger.
 
->If you prefer, you can turn off the Assistant from Settings. Tapping on New Location Trigger from the home screen will load up the default location trigger template and display the Edit Location Trigger screen. From there you can adjust whatever setting you want in the new location trigger.
+> 💡 If you prefer, you can turn off the Assistant from Settings. Tapping on New Location Trigger from the home screen will load up the default location trigger template and display the Edit Location Trigger screen. From there you can adjust whatever setting you want in the new location trigger.
 
 If you want to add multiple locations at a time, GeoCuts currently supports three methods:
 
@@ -298,7 +300,7 @@ When you tap on a location trigger from the GeoCuts Home screen, you'll be direc
         - **Optional Input**: optional text input to provide to the shortcut. The input is contained with the [GeoCuts Dictionary](#developer) under the `Input` key. 
 - **Schedule**: Configure when the location trigger is active and how frequently it can run.
 	- **Active Timeframe**: The times during the day when this location trigger is active. ![Active Timeframe](https://adamtow.github.io/geocuts/images/active-hours.png)
-	- **Active Days**: The days of the week on which the location trigger will work. NOTE: If you deselect all days, every day will be selected again.![Active Days](https://adamtow.github.io/geocuts/images/day-schedule.png)
+	- **Active Days**: The days of the week on which the location trigger will work. ⚠️ If you deselect all days, every day will be selected again.![Active Days](https://adamtow.github.io/geocuts/images/day-schedule.png)
 	- **Repeat Interval**: How long the location trigger must wait before being able to be triggered again at the same location. You can specify:
 		- **Run Once**: Once the location trigger runs, it turns itself off. Use this for one time events. 
 		- **Minutes**: The number of minutes you must wait before the location trigger becomes active again. ![Repeat Interval using minutes](https://adamtow.github.io/geocuts/images/repeat-interval.png)
@@ -306,12 +308,12 @@ When you tap on a location trigger from the GeoCuts Home screen, you'll be direc
 		- **Days**: The number of calendar days you must wait before the location trigger becomes active again. 
 		- **No Delay**: Repeat the command as often as GeoCuts is called by Cronios. 
 - **Display Notification When Run**: Displays a banner notification when the location trigger’s command is run. Specify false to suppress the notification. 
-- **Add to Reminders**: Adds a location-reminder to run GeoCuts in your Reminders app. This is useful if you don't plan to run Cronios all the time or if you want an extra reminder that you have a location trigger ready to run when you enter a location.
+- **Add to Reminders**: Adds a location-based reminder to run GeoCuts in your Reminders app. This is useful if you don't plan to run Cronios all the time or if you want an extra reminder that you have a location trigger ready to run when you enter a location.
 
 ![Location Reminder](https://adamtow.github.io/geocuts/images/location-reminder.png)
 
-- **Export**: Exports the current location trigger. You can copy and paste the text displayed in the Quick Look window and import it on another iOS device running GeoCuts.
-- **Delete**: Deletes the current location trigger. You will be prompted to delete any location-reminders in the Reminders app as well.
+- **Export**: Exports the current location trigger. You can copy and paste the text displayed in the Quick Look window and import it onto another iOS device running GeoCuts.
+- **Delete**: Deletes the current location trigger. You will be prompted to delete any location-based reminders in the Reminders app as well.
 - **Home**: Returns to the GeoCuts Home screen.
 
 ***
@@ -339,24 +341,33 @@ Importing the cron job lets you choose from check intervals of 2, 5, 10, 15, and
 
 >With Cronios 1.2.1 or higher, you can set a cron job’s Repeat Interval like you can with location triggers. So while you can have GeoCuts’ cron job evaluate every 5 minutes, you can set it to run every 30 minutes from the last successful run. Configure the Repeat Interval within GeoCuts cron job entry in Cronios. 
 
+Here are use cases for frequent and infrequent check intervals:
+
+- **Frequent**: You are going out for a walk or run and want your location triggers to be called as you move through your route. You’ll want GeoCuts to check frequently like every two minutes. You will also want to have your iPhone unlocked to avoid the lock detection prompt. Place a cover over the screen to prevent accidental presses while it’s in your pocket. 
+- **Less Frequent**: You know you will be at a location for hours at a time. Set GeoCuts to check on a less frequent interval like every 30 minutes or hourly. 
+- **Manual**: You create location-based Reminders for your location triggers and will trigger GeoCuts manually each time you are notified. 
+
+***
+
 <span id="helper"></span>
-### GeoCuts Helper
-The GeoCuts Helper shortcut does two things:
+## GeoCuts Helper
+The GeoCuts Helper shortcut does one of three things when launched:
 
 1. Creates new location triggers in GeoCuts from the iOS Share sheet.
 2. Calls the `Run Once` function of GeoCuts.
+3. Calls the `Run Once` function of GeoCuts and exits if called from Cronios or WatchCuts. 
 
 ![GeoCuts Helper creates new location triggers from the iOS Share sheet.](https://adamtow.github.io/geocuts/images/geocuts-helper.png)
 
 To install GeoCuts Helper, follow these steps:
 
-1. Tap `Settings…` from the GeoCuts Home screen.
-2. Tap `Install GeoCuts Helper Shortcut…`.
-3. Tap `Open` or `Tap to Install GeoCuts Helpers`.
+1. Tap **Settings** from the GeoCuts Home screen.
+2. Tap **Install GeoCuts Helper Shortcut**.
+3. Tap **Open** or **Tap to Install GeoCuts Helper**. 
 
 ![Installing the GeoCuts Helper shortcut.](https://adamtow.github.io/geocuts/images/geocuts-helper-install.png)
 
-#### Using GeoCuts Helper from the iOS Share Sheet
+### Using GeoCuts Helper from the iOS Share Sheet
 You can use GeoCuts Helper from the iOS Share sheet to create new location triggers. Try it using:
 
 - Photos that you have taken with your iPhone. 
@@ -366,19 +377,21 @@ You can use GeoCuts Helper from the iOS Share sheet to create new location trigg
 - Text files. 
 - Web pages. 
 
-1. Tap Share. 
-2. Choose GeoCuts Helper. 
+1. Tap **Share**. 
+2. Choose **GeoCuts Helper**. 
 3. If multiple locations are found in the shared data, a menu will appear allowing you to choose which locations to import. 
 4. Select which command to use with the imported locations. 
-5. Adjust the location and name of each imported location trigger. 
+5. Tap **Done**. 
+6. Choose whether to use the default command or assign a custom command to imported location triggers. 
+7. Adjust the location and name of each imported location trigger. 
 
-#### Evaluate Your Location Triggers with GeoCuts
+### Evaluate Your Location Triggers with GeoCuts
 Tapping on GeoCuts Helper from the Shortcuts screen will cause GeoCuts to evaluate all of your location triggers. For even faster access, add GeoCuts Helper to your iOS Home screen and add a Siri phrase.
 
 1. From the Shortcuts home screen, tap the edit button in GeoCuts Helper.
 2. Tap the Settings icon in the upper-right.
-3. Tap `Add to Siri` and follow the on-screen directions.
-4. Tap `Add to Home Screen` and follow the on-screen directions.
+3. Tap **Add to Siri** and follow the on-screen directions.
+4. Tap **Add to Home Screen** and follow the on-screen directions.
 
 ![Adding the GeoCuts Helper shortcut to Siri and the iOS Home screen.](https://adamtow.github.io/geocuts/images/geocuts-helper-siri-home.png)
 
@@ -445,7 +458,7 @@ Your default mapping application is used with the following commands in GeoCuts:
 
 <span id="lock-detection"></span>
 ### Lock Detection
-When running automatically via Cronios, GeoCuts can detect when it is running but your device is locked. It does so by checking the device brightness. If it's 0, GeoCuts considers the device locked. GeoCuts can display an audible notification banner or speak to you. 
+When running automatically via Cronios, GeoCuts can detect when it is running while your device may be locked. It does so by checking if the screen brightness value is 0; if so, GeoCuts considers the device locked. GeoCuts can display an audible notification banner or speak to you. 
 
 It will then wait 10 seconds before evaluating the brightness value again. If the brightness value is above 0, it considers the device unlocked and continues evaluating your location triggers. If the device brightness remains 0, GeoCuts does not do any evaluation and returns control back to Cronios.
 
@@ -463,7 +476,7 @@ Lock Detection is not perfect and has the following limitations:
 ### Advanced
 
 <span id="logging"></span>
-- **Log Level**: GeoCuts can be configured to write to a log file to iCloud Drive. Select from one of four logging levels:
+- **Log Level**: GeoCuts can be configured to write to a log file on iCloud Drive. Select from one of four logging levels:
 	1. **No Logging**
 	2. **Basic**: Only run activity will be recorded.
 	3. **Extended**: GeoCuts will write to a location log of all the places it has checked your location triggers.
@@ -480,7 +493,7 @@ Lock Detection is not perfect and has the following limitations:
 - **Import Location Triggers**: Import location triggers into GeoCuts. The input must be a valid GeoCuts Export Dictionary object.
 - **Check For Updates**: Checks for updates to GeoCuts on GitHub.
 - **Change Language**: Change to a different language.
-- **Reset**: Reset GeoCuts back to factory settings, erase all content and settings from GeoCuts, or clear the Shortcuts icon cache.i
+- **Reset**: Reset GeoCuts back to factory settings, erase all content and settings from GeoCuts, or clear the Shortcuts icon cache.
 
 *** 
 
@@ -491,10 +504,13 @@ When getting the current location, you may experience the following error condit
 1. GPS location cannot be retrieved.
 2. Network is offline.
 3. One of you location triggers has an invalid location.
+4. A location trigger’s shortcut had a problem.  
 
 Because Shortcuts does not provide much in the way of error checking, this error will terminate GeoCuts (and Cronios, if it was running in the background). GeoCuts will not run in automatic evaluation mode until you clear the error, which you can do simply by opening the application to the GeoCuts Home screen.
 
 If the error was a result of an invalid location, you must correct the location trigger before you can continue evaluation.
+
+If GeoCuts crashed because of a problem with the location trigger’s shortcut, you will have to fix the shortcut before continuing. 
 
 *** 
 
@@ -503,6 +519,7 @@ If the error was a result of an invalid location, you must correct the location 
 GeoCuts sends a special GeoCuts dictionary to all shortcuts that it calls from a location trigger. The GeoCuts dictionary has the following fields defined:
 
 - **GeoCuts**: A boolean value true means the shortcut is being run from GeoCuts.
+- **Background**: A flag that tells the shortcut it may be running in the background. 
 - **Name**: The name of the location trigger.
 - **Location**: The current location.
 - **Exit**: A boolean value of true means the shortcut is an exit trigger.
@@ -533,7 +550,7 @@ Learn more how you can create your own [shortcut applications with App Framework
 ## Localization
 GeoCuts comes pre-installed for the English language, but the app is fully localized and ready to be translated into different languages. If you would like to help translate GeoCuts, submit a pull request based off of the [English.json localization template](https://github.com/adamtow/geocuts/blob/master/localization/English.json) on GitHub.
 
-GeoCuts is a complicated shortcut application, and there are a lot of strings to translate. 
+> Note: GeoCuts is a complicated shortcut application, and there are a lot of strings to translate. 
 
 <span id="license"></span>
 ## License
