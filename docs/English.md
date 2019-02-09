@@ -47,7 +47,7 @@ Here are a few ideas on what you can do automatically with GeoCuts:
 
 <span id="background"></span>
 ## Background
-GeoCuts addresses the problem of that you can't automatically run shortcuts based on your location. While there are a number of great apps that let you create location triggers — Find My Friends, Reminders, IFTTT, and Launch Center Pro — none of them can run a shortcut without you having to tap on a notification banner. Here are some pros and cons for each app:
+GeoCuts addresses the problem that you can't automatically run shortcuts based on your location. While there are a number of great apps that let you create location triggers — Find My Friends, Reminders, IFTTT, and Launch Center Pro — none of them can run a shortcut without you having to tap on a notification banner. Here are some pros and cons for each app:
 
 - **GeoCuts**
     - PROS: Works in the background. Automatically runs shortcuts and sends text messages. Dedicated interface for managing your location triggers. 
@@ -95,14 +95,14 @@ When you first install GeoCuts, there will be two setup phases to complete:
 2. GeoCuts Setup
 
 ### Customize Shortcut
-The Customize Shortcuts screen will appear and ask you the following questions:
+First, the Customize Shortcut screen will appear and ask you the following questions:
 
 1. **Siri Language**: Used with the [Lock Detection](#lock-detection) feature, this is the language Siri will speak to you. 
 2. **Siri Voice**: The voice Siri will use to speak the Lock Detection prompt. 
 
 ![GeoCuts Customize Shortcut](https://adamtow.github.io/geocuts/images/geocuts-customize-shortcut.png)
 
->It may take a few seconds for Shortcuts to record your changes after tapping Done from the Customize Shortcuts and Shortcut Settings screens due to the large size of GeoCuts (almost 5,000 actions).
+> NOTE: It may take a few seconds for Shortcuts to record your changes after tapping Done from the Customize Shortcuts and Shortcut Settings screens due to the large size of GeoCuts (almost 5,000 actions).
 
 ### GeoCuts Setup
 Next, GeoCuts will ask you a series of setup questions. You can change all of these settings later in GeoCuts Settings. 
@@ -127,17 +127,17 @@ Let’s create your first location trigger.
 
 Once GeoCuts is open, follow these steps:
 
-1. Tap New Location Trigger… to open the **Location Trigger Assistant**. 
+1. Tap **New Location Trigger** to open the **Location Trigger Assistant**. 
 2. Enter the location where you want the trigger to occur. You can specify a street address or Latitude and Longitude. For now, enter the special string `{{Current Location}}` to create a location trigger that always runs wherever you are.
-3. Choose whether your trigger runs by entering or exiting the location. 
-4. Enter the maximum distance (in miles or kilometers) from the location where the trigger will occur. \
+3. Choose whether your trigger runs by **arriving** at or **leaving** the location. 
+4. Enter the **maximum distance** (in miles or kilometers) from the location where the trigger will occur. \
 \
 ![Create Location Trigger #1](https://adamtow.github.io/geocuts/images/create-location-trigger-1.png)
 \
 \
 \
 
-5. Choose whether you want to send a text message or run a shortcut. 
+5. Choose whether you want to send a **text message** or **run a shortcut**. 
 6. If you chose message, you can send to up to five recipients. 
 7. If you chose shortcut, be sure to select a [background-aware shortcut](#background-aware-shortcuts). You can also optionally add input to your shortcut. \
 \
@@ -146,9 +146,9 @@ Once GeoCuts is open, follow these steps:
 \
 \
 
-8. Set active times and days for your location trigger. You can for instance, set up a trigger to only run from 8 a.m. to 10:00 a.m. on Monday through Friday. 
-9. Set how long the location trigger must wait after running to run again. 
-10. Enter some optional tags for the location trigger. You can filter which location triggers appear and run on the GeoCuts Home screen.\
+8. Set **active times** and **active days** for your location trigger. You can for instance, set up a trigger to only run from 8 a.m. to 10:00 a.m. on Monday through Friday. 
+9. Set the **repeat interval**, or how long the location trigger must wait after running to run again. 
+10. Enter some optional **tags** for the location trigger. You can filter which location triggers appear and run on the GeoCuts Home screen.\
 \
 \
 ![Create Location Trigger #3](https://adamtow.github.io/geocuts/images/create-location-trigger-3.png)
@@ -156,17 +156,17 @@ Once GeoCuts is open, follow these steps:
 \
 \
 
-11. Enter a name for your new location trigger. 
-12. Choose to add a location-reminder in the Reminders app to run the [GeoCuts Helper shortcut](#geocuts-helper). 
-13. Tap Home. \
+11. Enter a **name** for your new location trigger. 
+12. Choose to add a **location-reminder** in the Reminders app to run the [GeoCuts Helper shortcut](#geocuts-helper). 
+13. Tap **Home**. \
 \
 ![Create Location Trigger #4](https://adamtow.github.io/geocuts/images/create-location-trigger-4.png)\
 \
 \
 \
 
-14. Tap Run. 
-15. Tap Run Once…
+14. Tap **Run**. 
+15. Tap **Run Once**.
 
 GeoCuts will now perform the following tasks automatically:
 
@@ -185,7 +185,7 @@ When run by Cronios or manually GeoCuts takes the following steps:
 
 1. Checks the global ON/OFF switch. If OFF, it exits. If ON, it continues to Step 2. 
 2. Checks if the device is locked using the [Lock Detection technique from Cronios](http://cronios.com#lock-detection). If the device appears locked and Lock Detection is enabled in Settings, an audible prompt or banner notification with sound appears is presented to the user to unlock the device. If the device still appears to be locked after 10 seconds, exit. Otherwise, continue to Step 3. 
-3. Notifies the user that an app switch is about to occur. 
+3. Notifies the user that an app switch is about to occur.
 4. Switches to the Shortcuts app. To retrieve the current location and send messages, Shortcuts must be the frontmost application. 
 5. Retrieves the current location of the device. This may take several seconds if you are using Get Current Location instead of Get Current Weather. 
 6. Iterates through all active and filtered location triggers and determines whether the current location lies within the radius of each trigger.
