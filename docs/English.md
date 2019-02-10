@@ -45,6 +45,7 @@ If you prefer not to run GeoCuts automatically with Cronios, you can also set lo
 - [Developers](#developers)
 	- [Shortcut App Framework](#framework)
 - [Localization](#localization)
+- [Version History](#version-history)
 - [License](#license)
 
 <span id="background"></span>
@@ -551,6 +552,16 @@ Learn more how you can create your own [shortcut applications with App Framework
 GeoCuts comes pre-installed for the English language, but the app is fully localized and ready to be translated into different languages. If you would like to help translate GeoCuts, submit a pull request based off of the [English.json localization template](https://github.com/adamtow/geocuts/blob/master/localization/English.json) on GitHub.
 
 > Note: GeoCuts is a complicated shortcut application, and there are a lot of strings to translate. 
+
+***
+
+<span id="version-history"></span>
+## Version History
+
+- 1.0.0: Released February 10, 2019. Initial release.
+- 1.0.1: Released February 10, 2019. Fixed link to embedded GeoCuts Helper shortcut.
+
+***
 
 <span id="license"></span>
 ## License
