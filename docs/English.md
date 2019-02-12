@@ -549,7 +549,11 @@ Learn more how you can create your own [shortcut applications with App Framework
 
 <span id="localization"></span> 
 ## Localization
-GeoCuts comes pre-installed for the English language, but the app is fully localized and ready to be translated into different languages. If you would like to help translate GeoCuts, submit a pull request based off of the [English.json localization template](https://github.com/adamtow/geocuts/blob/master/localization/English.json) on GitHub.
+GeoCuts is available in English, but the application is fully ready to be localized. I have developed an application, Localization Helper, that will assist you in localizing GeoCuts into your language.
+
+> [**Download Localization Helper from RoutineHub &raquo;**](https://routinehub.co/shortcut/1931)
+
+When the localization file is complete, either submit a pull request on [my GitHub page](https://github.com/adamtow/) or [contact me](mailto:geocuts+localization@tow.com).
 
 > Note: GeoCuts is a complicated shortcut application, and there are a lot of strings to translate. 
 
