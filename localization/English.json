@@ -29,6 +29,7 @@
 	    "debug.endLoop": "Next Function:",
 	    "error.activeTimes.outOfBounds": "The end time was before the start time.",
 	    "error.activeTimes.outOfBounds.title": "Invalid Time",
+	    "error.cache": "GeoCuts must reload its menu cache. Please try again after the Home screen appears",
 	    "error.cronios": "Cronios is not installed on this iOS device. Download it from http://cronios.com.",
 	    "error.cronios.title": "Cronios Not Installed",
 	    "error.location.invalid": "An error occurred while running GeoCuts. Either the current location could not be retrieved or one of your location triggers may have an invalid location.\n\nYou must correct this before location trigger monitoring can work again.",
