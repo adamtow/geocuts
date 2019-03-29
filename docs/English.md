@@ -564,6 +564,12 @@ When the localization file is complete, either submit a pull request on [my GitH
 
 - 1.0.0: Released February 10, 2019. Initial release.
 - 1.0.1: Released February 10, 2019. Fixed link to embedded GeoCuts Helper shortcut.
+- 1.0.2: GeoCuts Helper launches GeoCuts in Run Once mode by default. You can change this setting in the GeoCuts Helper shortcut.
+- 1.0.3: Caching of location triggers menu items on the GeoCuts Home screen. Use {{Current Location}} token in Text Messages commands to insert the current location.
+- 1.0.4: Fixed bug in Location Trigger Assistant where setting Active Hours would display an error even when the end time was after the start time.
+- 1.0.5: Added Check Online preference. Leave off to prevent Apple bug with Get Current IP action.
+- 1.0.6: Use Local IP instead of External IP to get around Get Current IP certificate error Apple bug.
+- 1.1.0: Released March 28, 2019. Updated to support Shortcuts 2.2.
 
 ***
 
