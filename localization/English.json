@@ -162,6 +162,7 @@
 	    "menu_entry_triggerRadius_description": "Tap to adjust trigger radius…",
 	    "menu_erase_cancel": "Don't Erase",
 	    "menu_erase_content": "Erase All Content & Settings…",
+	    "menu_erase_menu_caches": "Clear Menu Caches",
 	    "menu_import_command_default": "Use Default Command",
 	    "menu_import_command_all": "Set Command For All…",
 	    "menu_main_about": "About",
